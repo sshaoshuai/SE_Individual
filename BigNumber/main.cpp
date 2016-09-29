@@ -12,6 +12,7 @@ const int BASE[SCALE] = { 1, 10, 100, 1000 };
 class BigNumber{
 private:
 	int size;
+	int sign;
 	int d[MAXL];	// d[1]: lowest digit
 
 public:
@@ -72,6 +73,22 @@ public:
 		}
 		return ans;
 	}
+
+	// BigNumber  Minus Operation
+	friend BigNumber operator - (const BigNumber & A, const BigNumber & B){
+		BigNumber ans;
+		int delta = 0;
+		ans.size = A.size;
+		for (int i = 1; i <= ans.size; i++){
+			delta = MAX_BASE + A.d[i] - B.d[i] + delta;
+			ans.d[i] = delta % MAX_BASE;
+			delta = delta / MAX_BASE - 1;
+		}
+		while (ans.size > 1 && ans.d[ans.size] == 0) ans.size--;
+		return ans;
+	}
+
+
 };
 
 
@@ -80,9 +97,9 @@ public:
 int main()
 {
 	BigNumber A("13543541646588824354350");
-	BigNumber B("465412325441353125343152433152345");
-
-	cout << (A + B).toString() << endl;
+	BigNumber B("41353125343152433152345");
+	BigNumber C("41353125343152433152344");
+	cout << (B - C).toString() << endl;
 	getchar();
 	return 0;
 }
