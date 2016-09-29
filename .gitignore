@@ -1,4 +1,5 @@
 /Debug/
 /BigNumber/Debug/
 *.suo
+*.sdf
 *.opensdf
