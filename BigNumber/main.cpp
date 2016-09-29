@@ -158,7 +158,7 @@ public:
 		return ans;
 	}
 
-	// multiplication function
+	// multiplication operation
 	friend BigNumber operator * (const BigNumber & A, const BigNumber & B){
 		BigNumber ans;
 		ans.size = A.size + B.size;
@@ -177,6 +177,29 @@ public:
 		return ans;
 	}
 
+	// multiplication operation with a int
+	friend BigNumber operator * (const BigNumber & A, const int & _factor){
+		BigNumber ans;
+		int delta = 0;
+		int sign = 1, factor = _factor;
+		if (factor < 0){
+			sign = -1; factor = abs(factor);
+		}
+		ans.size = A.size;
+		for (int i = 1; i <= A.size; i++){
+			delta = A.d[i] * factor + delta;
+			ans.d[i] = delta % MAX_BASE;
+			delta /= MAX_BASE;
+		}
+		while (delta > 0){
+			ans.d[++ans.size] = delta % MAX_BASE;
+			delta /= MAX_BASE;
+		}
+		while(ans.size > 1 && ans.d[ans.size] == 0) ans.size--;
+		ans.sign = A.sign * sign;
+		if (ans.size == 1 && ans.d[1] == 0) ans.sign = 1;
+		return ans;
+	}
 
 	// A < B comparison
 	friend bool operator < (const BigNumber & A, const BigNumber & B){
@@ -198,7 +221,7 @@ public:
 int main()
 {
 	BigNumber A("-135");
-	BigNumber B("-410");
+	BigNumber B("2");
 	BigNumber C("465412325427809583696563608797995");
 	cout << A.toString() << endl;
 	cout << B.toString() << endl;
