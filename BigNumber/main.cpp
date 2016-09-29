@@ -103,6 +103,26 @@ public:
 		return false;
 	}
 
+	// check if (A << offset) < B
+	friend bool div_smaller(const BigNumber & A, const BigNumber & B, int offset){
+		if (A.size + offset != B.size) return A.size + offset < B.size;
+		for (int i = A.size; i > 0; i--)
+		if (A.d[i] != B.d[i + offset])
+			return A.d[i] < B.d[i + offset];
+		return true;
+	}
+
+	// B - (A << offset)
+	friend void div_minus(BigNumber & A, const BigNumber & B, int offset){
+		int delta = 0;
+		for (int i = 1; i <= A.size - offset; i++){
+			delta = MAX_BASE + A.d[i + offset] - B.d[i] + delta;
+			A.d[i + offset] = delta % MAX_BASE;
+			delta = delta / MAX_BASE - 1;
+		}
+		while (A.size > 1 && A.d[A.size] == 0) A.size--;
+	}
+
 	// BigNumber Add Operation
 	friend BigNumber operator + (const BigNumber & A, const BigNumber & B){
 		BigNumber ans;
@@ -201,6 +221,29 @@ public:
 		return ans;
 	}
 
+	// division operation
+	friend BigNumber operator / (const BigNumber & A, const BigNumber & B){
+		BigNumber ans;
+		Rem = A;
+		Mid[0] = B;
+		for (int i = 1; i <= 13; i++) Mid[i] = Mid[i - 1] * 2;
+		for (int offset = A.size - B.size; offset >= 0; offset--){
+			int delta = 1 << 13;
+			for (int j = 13; j >= 0; j--){
+				if (div_smaller(Mid[j], Rem, offset)){
+					div_minus(Rem, Mid[j], offset);
+					ans.d[offset + 1] += delta;
+				}
+				delta >>= 1;
+			}
+		}
+		ans.size = max(1, A.size - B.size + 1);
+		while (ans.size > 1 && ans.d[ans.size] == 0) ans.size--;
+		ans.sign = A.sign * B.sign;
+		Rem.sign = A.sign;
+		return ans;
+	}
+
 	// A < B comparison
 	friend bool operator < (const BigNumber & A, const BigNumber & B){
 		if (A.sign != B.sign){
@@ -213,21 +256,28 @@ public:
 	}
 
 
-};
+}Mid[14], Rem;
 
 
 
 
 int main()
 {
-	BigNumber A("-135");
+	BigNumber A("-135022155555");
 	BigNumber B("2");
 	BigNumber C("465412325427809583696563608797995");
+	BigNumber D("10561");
+
+	cout << (D / B).toString() << endl;
+	cout << Rem.toString() << endl;
+
 	cout << A.toString() << endl;
 	cout << B.toString() << endl;
 	cout << C.toString() << endl;
-	cout << (A * B).toString() << endl;
-	cout << (B * C).toString() << endl;
+	D = A / C;
+	cout << D.toString() << endl;
+	cout << Rem.toString() << endl;
+	cout << (D * A + Rem).toString() << endl;
 	getchar();
 	return 0;
 }
