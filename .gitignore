@@ -1,6 +1,8 @@
 /Debug/
 /BigNumber/Debug/
 /NthPrime/Debug/
+/WordCount/Debug/
+/WordCount/novel/
 *.suo
 *.sdf
 *.opensdf
