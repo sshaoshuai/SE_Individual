@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BigNumber", "BigNumber\BigN
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NthPrime", "NthPrime\NthPrime.vcxproj", "{3F1962FC-8E6A-47CC-8986-1A548ACCEEF6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WordCount", "WordCount\WordCount.vcxproj", "{59B3030E-6623-483B-A5F5-E396CD8247D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -21,6 +23,10 @@ Global
 		{3F1962FC-8E6A-47CC-8986-1A548ACCEEF6}.Debug|Win32.Build.0 = Debug|Win32
 		{3F1962FC-8E6A-47CC-8986-1A548ACCEEF6}.Release|Win32.ActiveCfg = Release|Win32
 		{3F1962FC-8E6A-47CC-8986-1A548ACCEEF6}.Release|Win32.Build.0 = Release|Win32
+		{59B3030E-6623-483B-A5F5-E396CD8247D0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{59B3030E-6623-483B-A5F5-E396CD8247D0}.Debug|Win32.Build.0 = Debug|Win32
+		{59B3030E-6623-483B-A5F5-E396CD8247D0}.Release|Win32.ActiveCfg = Release|Win32
+		{59B3030E-6623-483B-A5F5-E396CD8247D0}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
