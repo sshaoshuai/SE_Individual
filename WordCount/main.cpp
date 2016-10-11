@@ -12,7 +12,7 @@
 #include <time.h>
 
 using namespace std;
-const int MAX_THREAD = 30;
+const int MAX_THREAD = 64;
 
 typedef pair<string, int> PSI;
 map<string, int> M;
@@ -41,6 +41,7 @@ inline bool isLegal(char c){
 class ThreadPool{
 	vector<thread*> thread_list;
 	bool thread_exit;
+	bool thread_busy[MAX_THREAD];
 
 	void wordCount(string filePath, int id){
 		//m_print_lock.lock();
@@ -48,7 +49,7 @@ class ThreadPool{
 		//m_print_lock.unlock();
 
 		FILE *fp = fopen(filePath.c_str(), "r");
-		char srcWord[100];
+		char srcWord[1000];
 		int len;
 		string curWord;
 
@@ -74,11 +75,13 @@ class ThreadPool{
 		m_print_lock.unlock();
 		string nowFile;
 		while (!thread_exit){
+			thread_busy[id] = false;
 			m_lock.lock();
 			if (task_list.empty()){
 				m_lock.unlock();
 				continue;
 			}
+			thread_busy[id] = true;
 			nowFile = task_list.front();
 			task_list.pop();
 			m_lock.unlock();
@@ -91,7 +94,32 @@ class ThreadPool{
 			//printf("Complete: Thread %d: %s\n", id, nowFile.c_str());
 			//m_print_lock.unlock();
 		}
+		/*m_print_lock.lock();
+		printf("Thread %d exit\n", id);
+		m_print_lock.unlock();*/
 		return;
+	}
+
+	void dfs_merge(int l, int r){
+		if (l == r) return;
+		int mid = (l + r) >> 1;
+
+		if (r - l > 1){
+			thread l_thread(&ThreadPool::dfs_merge, this, l, mid);
+			thread r_thread(&ThreadPool::dfs_merge, this, mid + 1, r);
+			l_thread.join(); r_thread.join();
+		}
+		mid++;
+		map<string, int>::iterator it;
+		for (it = M_thread[mid].begin(); it != M_thread[mid].end(); it++){
+			if (M_thread[l].find(it->first) == M_thread[l].end())
+				M_thread[l][it->first] = it->second;
+			else
+				M_thread[l][it->first] += it->second;
+		}
+		m_print_lock.lock();
+		printf("Merge (%d, %d)\n", l, r);
+		m_print_lock.unlock();
 	}
 
 public:
@@ -102,7 +130,14 @@ public:
 			thread_list.push_back(new thread(&ThreadPool::wordCount_for_thread, this, i));
 	}
 
+	void mul_merge(){
+		setTime("Mul_Merge");
+		dfs_merge(0, thread_list.size() - 1);
+		getTime("Mul_Merge");
+	}
+
 	void merge(){
+		setTime("Single Merge");
 		M.clear();
 		map<string, int>::iterator it;
 		for (int id = 0; id < thread_list.size(); id++){
@@ -113,6 +148,13 @@ public:
 					M[it->first] += it->second;
 			}
 		}
+		getTime("Single Merge");
+	}
+
+	bool threadsFree(){
+		for (int i = 0; i < thread_list.size(); i++)
+			if (thread_busy[i] == true) return false;
+		return true;
 	}
 
 	void join(){
@@ -158,7 +200,7 @@ struct cmp{
 };
 
 
-void find_topN_by_sort(int topN){
+void find_topN_by_sort(map<string, int> & M, int topN){
 	setTime("find_topN_by_sort");
 
 	vector< PSI > A(M.begin(), M.end());
@@ -172,7 +214,7 @@ void find_topN_by_sort(int topN){
 	getTime("find_topN_by_sort");
 }
 
-void find_topN_by_heap(int topN){
+void find_topN_by_heap(map<string, int> & M, int topN){
 	setTime("find_topN_by_heap");
 	priority_queue<PSI, vector<PSI>, cmp> Q;
 	while (!Q.empty()) Q.pop();
@@ -232,24 +274,25 @@ int main(void)
 	//dfsFolder("novel\\AB");
 	//find_topN_by_heap(topN);
 	
-	dfsFolder("novel\\AB");
+	dfsFolder("novel");
 
-	ThreadPool myPool(MAX_THREAD);
+	setTime("Word Count");
+	ThreadPool thread_pool(MAX_THREAD);
 	
 	while (true){
 		m_lock.lock();
-		if (task_list.size() == 0){
-			myPool.exit();
+		if (task_list.size() == 0 && thread_pool.threadsFree()){
+			thread_pool.exit();
 			m_lock.unlock();
 			break;
 		}
 		m_lock.unlock();
 	}
-	cout << "Count End" << endl;
-	Sleep(15000);
+	getTime("Word Count");
 
-	myPool.merge();
-	find_topN_by_heap(topN);
+	thread_pool.merge();
+	thread_pool.mul_merge();
+	find_topN_by_heap(M_thread[0], topN);
 
 	cout << endl << "Program Completed!" << endl;
 	
