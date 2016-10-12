@@ -11,6 +11,8 @@
 #include <Windows.h>
 #include <io.h>
 #include <time.h>
+//#define DEBUG
+
 using namespace std;
 const int MAX_THREAD = 7;
 const int MAX_BRANCH = 26;
@@ -18,13 +20,13 @@ const int MAX_BRANCH = 26;
 clock_t		tStart = 0;
 void setTime(const char * prompt)
 {
-	printf("---------------------------------\nStart: %s\n\n", prompt);
+	printf("Time Count Start:\n%s\n\n", prompt);
 	tStart = clock();
 }
 void getTime(const char * prompt)
 {
 	double time = (double)(clock() - tStart) / (double)CLOCKS_PER_SEC;
-	printf("\nComplete: %s %f second\n--------------------------------\n", prompt, time);
+	printf("%s: %f second\nTime Count Completed!", prompt, time);
 }
 
 inline bool isLegal(char c){
@@ -161,8 +163,9 @@ public:
 	}
 
 	void find_topN(int topN){
+#if defined(DEBUG)
 		setTime("find_topN_by_heap");
-
+#endif
 		while (!Q.empty()) Q.pop();
 
 		dfs_find_topN(root, topN);
@@ -174,11 +177,13 @@ public:
 			output.push_back(Q.top());
 			Q.pop();
 		}
+		printf("Top %d Word: \n\n", topN);
 		for (int i = output.size() - 1; i >= 0; i--)
-			printf("%s %d\n", output[i].first, output[i].second);
-
+			printf(" %s\t%d\n", output[i].first, output[i].second);
+		printf("\n");
+#if defined(DEBUG)
 		getTime("find_topN_by_heap");
-
+#endif
 	}
 
 
@@ -204,18 +209,11 @@ class ThreadPool{
 		rewind(fp);
 
 		char *srcWord = new char[file_len + 6];
-		char temp[1000];
+		char temp[500];
 		int word_st = 0, word_len = 0;
 		fread(srcWord, 1, file_len, fp);
 
 		for (int i = 0; i < file_len; i++){
-			//if (isLegal(srcWord[i])){
-			//	if (srcWord[i] >= 'A' && srcWord[i] <= 'Z')
-			//		temp[word_len++] = srcWord[i] - 'A' + 'a';
-			//	else
-			//		temp[word_len++] = srcWord[i];
-			//	continue;
-			//}
 			if (srcWord[i] >= 'A' && srcWord[i] <= 'Z'){
 				temp[word_len++] = srcWord[i] - 'A' + 'a';
 				continue;
@@ -241,9 +239,6 @@ class ThreadPool{
 		int cnt_run_free = 0;
 		while (!thread_exit){
 			thread_busy[id] = false;
-			/*m_print_lock.lock();
-			printf("Run Empty: Thread %d\n", id);
-			m_print_lock.unlock();*/
 			cnt_run_free++;
 			if (cnt_run_free > 10) return;
 
@@ -258,18 +253,23 @@ class ThreadPool{
 			nowFile = task_list.front();
 			task_list.pop();
 			m_lock.unlock();
-			//m_print_lock.lock();
-			//printf("Start: Thread %d: %s\n", id, nowFile.c_str());
-			//m_print_lock.unlock();
+#if defined(DEBUG)
+			m_print_lock.lock();
+			printf("Start: Thread %d: %s\n", id, nowFile.c_str());
+			m_print_lock.unlock();
+#endif
 			wordCount(nowFile, id);
-
-			//m_print_lock.lock();
-			//printf("Complete: Thread %d: %s\n", id, nowFile.c_str());
-			//m_print_lock.unlock();
+#if defined(DEBUG)
+			m_print_lock.lock();
+			printf("Complete: Thread %d: %s\n", id, nowFile.c_str());
+			m_print_lock.unlock();
+#endif
 		}
-		/*m_print_lock.lock();
+#if defined(DEBUG)
+		m_print_lock.lock();
 		printf("Thread %d exit\n", id);
-		m_print_lock.unlock();*/
+		m_print_lock.unlock();
+#endif
 		return;
 	}
 
@@ -290,9 +290,11 @@ class ThreadPool{
 			else
 				M_thread[l][it->first] += it->second;
 		}
+#if defined(DEBUG)
 		m_print_lock.lock();
 		printf("Merge (%d, %d)\n", l, r);
 		m_print_lock.unlock();
+#endif
 	}
 
 	void dfs_merge_trie(int l, int r){
@@ -311,10 +313,11 @@ class ThreadPool{
 		Trie *right = word_count[mid];
 
 		left->merge(right);
-
+#if defined(DEBUG)
 		m_print_lock.lock();
-		//printf("Merge (%d, %d)\n", l, r);
+		printf("Merge (%d, %d)\n", l, r);
 		m_print_lock.unlock();
+#endif
 	}
 
 public:
@@ -327,14 +330,20 @@ public:
 	}
 
 	void mul_merge(){
+#if defined(DEBUG)
 		setTime("Mul_Merge");
 		cout << buf_offset << endl << word_buf_offset << endl;
+#endif
 		dfs_merge_trie(0, thread_list.size() - 1);
+#if defined(DEBUG)
 		getTime("Mul_Merge");
+#endif
 	}
 
 	void merge(){
+#if defined(DEBUG)
 		setTime("Single Merge");
+#endif
 		M.clear();
 		Map_PtrChar_Int::iterator it;
 		for (int id = 0; id < thread_list.size(); id++){
@@ -345,7 +354,9 @@ public:
 					M[it->first] += it->second;
 			}
 		}
+#if defined(DEBUG)
 		getTime("Single Merge");
+#endif
 	}
 
 	bool threadsFree(){
@@ -367,33 +378,6 @@ public:
 
 };
 
-void find_topN_by_heap(Map_PtrChar_Int & M, int topN){
-	setTime("find_topN_by_heap");
-	priority_queue<PSI, vector<PSI>, cmp> Q;
-	while (!Q.empty()) Q.pop();
-
-	Map_PtrChar_Int::iterator it;
-	int cnt = 0;
-	for (it = M.begin(), cnt = 0; it != M.end() && cnt < topN; it++, cnt++) 
-		Q.push(*it);
-	for (; it != M.end(); it++){
-		if (it->second < Q.top().second) continue;
-		Q.push(*it); Q.pop();
-	}
-
-	vector<PSI> output;
-	output.clear();
-	while (!Q.empty()){
-		output.push_back(Q.top());
-		Q.pop();
-	}
-	for (int i = output.size() - 1; i >= 0; i--)
-		printf("%s %d\n", output[i].first.now, output[i].second);
-	
-	getTime("find_topN_by_heap");
-}
-
-
 void dfsFolder(string folderPath){
 	_finddata_t fileInfo;
 	string formatPath = folderPath + "\\*";
@@ -412,24 +396,36 @@ void dfsFolder(string folderPath){
 		m_lock.lock();
 		task_list.push(folderPath + "\\" + fileInfo.name);
 		m_lock.unlock();
-		//wordCount(folderPath + "\\" + fileInfo.name);
 	} while (_findnext(fileHandle, &fileInfo) == 0);
 	_findclose(fileHandle);
 }
 
-int main(void)
+int main(int argc, char * argv[])
 {
-	scanf("%d", &topN);
-	M.clear();
+	//scanf("%d", &topN);
+	if (argc != 3){
+		printf("Parameter Number Wrong\n");
+		return -1;
+	}
 
+	topN = atoi(argv[2]);
+	string folderPath = string(argv[1]);
+	printf("Parameter Show:\n topN: \t%d\n folderPath: \t%s\n Thread Num: \t%d\n\n", 
+		topN, argv[1], MAX_THREAD);
 
-	//find_topN_by_sort(topN);
-	//dfsFolder("novel\\AB");
-	//find_topN_by_heap(topN);
-	
-	dfsFolder("novel");
-
+#if !defined(DEBUG)	
+	setTime("Word Count is runing...");
+#endif
+#if defined(DEBUG)
 	setTime("Word Count");
+#endif
+
+	M.clear();
+	dfsFolder(folderPath);
+	if (task_list.size() == 0){
+		return 0;
+	}
+
 	ThreadPool thread_pool(MAX_THREAD);
 	
 	while (true){
@@ -442,21 +438,19 @@ int main(void)
 		}
 		m_lock.unlock();
 	}
+#if defined(DEBUG)
 	getTime("Word Count");
-
-	//thread_pool.merge();
+#endif
+	
 	thread_pool.mul_merge();
-	//find_topN_by_heap(M_thread[0], topN);
-
-
 	word_count[0]->find_topN(topN);
 
-
-
+#if defined(DEBUG)
 	cout << endl << "Program Completed!" << endl;
-	
-	
 	getchar();
 	getchar();
+#else
+	getTime("Word Count Complete");
+#endif
 	return 0;
 }
