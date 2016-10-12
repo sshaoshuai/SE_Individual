@@ -60,7 +60,7 @@ void setTime(const char * prompt)
 void getTime(const char * prompt)
 {
 	double time = (double)(clock() - tStart) / (double)CLOCKS_PER_SEC;
-	printf("%s %f second\n", prompt, time);
+	printf("%s %f\n", prompt, time);
 }
 
 
@@ -132,17 +132,19 @@ void print_segment_table(){
 
 unsigned int find_nth_prime(unsigned int n){
 	int seg = 0;
-	for (int i = 1; i <= SEGMENT_NUM; i++)
+	for (int i = 0; i < SEGMENT_NUM; i++)
 	if (n <= primes_cnt[i]){
 		seg = i;
 		break;
 	}
 
-	int pos = n - primes_cnt[seg - 1];
+	int pos = n - primes_cnt[seg]
 
-	segment_sieve((seg - 1) * SEGMENT_LEN, seg * SEGMENT_LEN - 1);
 
-	return ans[pos];
+
+
+
+
 }
 
 
@@ -152,13 +154,8 @@ void PrintNum(unsigned int x){
 		temp[pos++] = x % 1000;
 		x /= 1000;
 	}
-	if (pos == 1){
-		printf("%u\n", temp[pos - 1]);
-		return;
-	}
-	printf("%u ", temp[pos - 1]);
-	for (int i = pos - 2; i > 0; i--) printf("%03u ", temp[i]);
-	printf("%03u\n", temp[0]);
+	for (int i = pos - 1; i > 0; i--) printf("%u ", temp[i]);
+	printf("%u\n", temp[0]);
 }
 
 
@@ -172,22 +169,37 @@ int main(int argc, char *argv[])
 		return 0;
 	}
 
-	int Nth = atoi(argv[1]);
-	if (Nth > 198995000){
-		printf("The number is too big!\n");
-		return 0;
-	}
-
-	setTime("");
-
 	make_basic_primes();
 
-	printf("The %dth prime is : ", Nth);
-	PrintNum(find_nth_prime(Nth));
-	getTime("Time Cost: ");
 
 
-	//print_segment_table();	
+
+
+	print_segment_table();
+	
+	//
+	//int now = segment_sieve(1, 10000000 - 1);
+	//cout << cnt << " " << ans[1] << " " << ans[cnt] << endl;
+
+	//now += segment_sieve(1000000, 2000000 - 1);
+	//cout << now << endl;
+	//cout << cnt << " " << ans[1] << " " << ans[cnt] << endl;
+
+
+	//setTime("Make Prime: ");
+	//linear_make_prime(MAX);
+	//PrintNum(ans[n]);
+	//getTime("Make End");
+
+
+	//setTime("Make Prime: ");
+	//make_prime(179424873);
+	//PrintNum(ans[n]);
+	//getTime("Make End");
+
+	
+
+	getchar();
 	return 0;
 }
 
