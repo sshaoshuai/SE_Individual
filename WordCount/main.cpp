@@ -18,17 +18,17 @@ const int MAX_BRANCH = 26;
 clock_t		tStart = 0;
 void setTime(const char * prompt)
 {
-	printf("\n-------------%s--------------\n\n", prompt);
+	printf("---------------------------------\nStart: %s\n\n", prompt);
 	tStart = clock();
 }
 void getTime(const char * prompt)
 {
 	double time = (double)(clock() - tStart) / (double)CLOCKS_PER_SEC;
-	printf("\n-------------%s %f second--------------\n\n", prompt, time);
+	printf("\nComplete: %s %f second\n--------------------------------\n", prompt, time);
 }
 
 inline bool isLegal(char c){
-	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'));
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
 
 
@@ -94,6 +94,11 @@ public:
 		memset(next_branch, NULL, sizeof(TrieNode*)* MAX_BRANCH);
 	}
 };
+TrieNode *TrieNodeBuf = new TrieNode[2000000];
+char * wordBuf = new char[10000000];
+int buf_offset = 0, word_buf_offset = 0;
+mutex buf_lock;
+
 
 class Trie{
 	TrieNode * root;
@@ -110,12 +115,16 @@ public:
 			index = src[i] - 'a';
 			if (index < 0 || index >= MAX_BRANCH) return;
 			if (curNode->next_branch[index] == NULL){
-				curNode->next_branch[index] = new TrieNode();
+				buf_lock.lock();
+				curNode->next_branch[index] = new (TrieNodeBuf + (buf_offset++)) TrieNode();
+				buf_lock.unlock();
 			}
 			curNode = curNode->next_branch[index];
 		}
 		if (curNode->word == NULL){
-			curNode->word = new char[strlen(src) + 1];
+			int len = strlen(src);
+			curNode->word = new (wordBuf + word_buf_offset) char[len + 3];
+			word_buf_offset += len + 3;
 			strcpy(curNode->word, src);
 		}
 		curNode->cnt += delta;
@@ -181,34 +190,7 @@ class ThreadPool{
 	bool thread_exit;
 	bool thread_busy[MAX_THREAD];
 
-	//void wordCount(string filePath, int id){
-	//	//m_print_lock.lock();
-	//	//printf("Inner: Thread %d: %s\n", id, filePath.c_str());
-	//	//m_print_lock.unlock();
-
-	//	FILE *fp = fopen(filePath.c_str(), "r");
-
-	//	char srcWord[1000];
-	//	int len;
-	//	string curWord;
-
-	//	while (!feof(fp)){
-	//		fscanf(fp, " %s", srcWord);
-	//		len = strlen(srcWord);
-	//		while (len > 0 && !isLegal(srcWord[len - 1])) len--;
-	//		if (len == 0) continue;
-	//		srcWord[len] = '\0';
-	//		curWord = string(srcWord);
-
-	//		if (M_thread[id].find(curWord) == M_thread[id].end())
-	//			M_thread[id][curWord] = 1;
-	//		else
-	//			M_thread[id][curWord]++;
-	//	}
-	//	fclose(fp);
-	//}
-
-	void wordCount2(string filePath, int id){
+	void wordCount(string filePath, int id){
 		FILE *fp = fopen(filePath.c_str(), "rb");
 		if (fp == NULL){
 			m_print_lock.lock();
@@ -227,49 +209,34 @@ class ThreadPool{
 		fread(srcWord, 1, file_len, fp);
 
 		for (int i = 0; i < file_len; i++){
-			if (isLegal(srcWord[i])){
-				//curWord = curWord + srcWord[i];
-				if (srcWord[i] >= 'A' && srcWord[i] <= 'Z')
-					temp[word_len++] = srcWord[i] - 'A' + 'a';
-				else
-					temp[word_len++] = srcWord[i];
+			//if (isLegal(srcWord[i])){
+			//	if (srcWord[i] >= 'A' && srcWord[i] <= 'Z')
+			//		temp[word_len++] = srcWord[i] - 'A' + 'a';
+			//	else
+			//		temp[word_len++] = srcWord[i];
+			//	continue;
+			//}
+			if (srcWord[i] >= 'A' && srcWord[i] <= 'Z'){
+				temp[word_len++] = srcWord[i] - 'A' + 'a';
+				continue;
+			}
+			else if (srcWord[i] >= 'a' && srcWord[i] <= 'z'){
+				temp[word_len++] = srcWord[i];
 				continue;
 			}
 			if (word_len == 0){
 				word_st = i + 1;
 				continue;
 			}
-			if (word_len > 1000){
-				printf("Error\n");
-				return;
-			}
-			word_len = min(word_len, 999);
 			temp[word_len] = '\0';
 			word_count[id]->insert(temp, 1);
-
-			//WordNode word;
-			//strcpy(word.now, temp);
-			//word.now[word_len] = '\0';
-
-			//if (M_thread[id].find(word) == M_thread[id].end())
-			//	M_thread[id][word] = 1;
-			//else
-			//	M_thread[id][word]++;
 			word_st = i + 1; word_len = 0;
 		}
-
-		//m_print_lock.lock();
-		//printf("Thread %d: Size = %d %s\n", id, file_len, filePath.c_str());
-		//m_print_lock.unlock();
-
 		delete [] srcWord;
 		fclose(fp);
 	}
 
 	void wordCount_for_thread(int id){
-		//m_print_lock.lock();
-		////printf("Thread %d\n", id);
-		//m_print_lock.unlock();
 		string nowFile;
 		int cnt_run_free = 0;
 		while (!thread_exit){
@@ -294,7 +261,7 @@ class ThreadPool{
 	/*		m_print_lock.lock();
 			printf("Start: Thread %d: %s\n", id, nowFile.c_str());
 			m_print_lock.unlock();*/
-			wordCount2(nowFile, id);
+			wordCount(nowFile, id);
 
 			//m_print_lock.lock();
 			//printf("Complete: Thread %d: %s\n", id, nowFile.c_str());
@@ -363,6 +330,7 @@ public:
 
 	void mul_merge(){
 		setTime("Mul_Merge");
+		cout << buf_offset << endl << word_buf_offset << endl;
 		dfs_merge_trie(0, thread_list.size() - 1);
 		getTime("Mul_Merge");
 	}

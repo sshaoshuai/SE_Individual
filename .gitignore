@@ -1,7 +1,9 @@
 /Debug/
+/Release/
 /BigNumber/Debug/
 /NthPrime/Debug/
 /WordCount/Debug/
+/WordCount/Release/
 /WordCount/novel/
 *.suo
 *.sdf
