@@ -3,6 +3,7 @@
 #include <string>
 #include <algorithm>
 #include <map>
+#include <unordered_map>
 #include <vector>
 #include <queue>
 #include <thread>
@@ -10,16 +11,39 @@
 #include <Windows.h>
 #include <io.h>
 #include <time.h>
-
 using namespace std;
 const int MAX_THREAD = 30;
 
-typedef pair<string, int> PSI;
-map<string, int> M;
-map<string, int> M_thread[MAX_THREAD];
 int topN;
 mutex m_lock, m_print_lock;
 queue<string> task_list;
+
+
+struct WordNode{
+	char now[1000];
+	bool operator== (const WordNode & A) const
+	{
+		return strcmp(now, A.now) == 0;
+	}
+};
+struct ptrCmp{
+	bool operator()(const WordNode A, const WordNode B) const
+	{
+		return strcmp(A.now, B.now) < 0;
+	}
+};
+struct MyHash{
+	size_t operator() (const WordNode & A) const
+	{
+		return hash_value(A.now);
+	}
+};
+
+
+typedef pair<WordNode, int> PSI;
+typedef unordered_map<WordNode, int, MyHash> Map_PtrChar_Int;
+Map_PtrChar_Int M;
+Map_PtrChar_Int M_thread[MAX_THREAD];
 
 
 clock_t		tStart = 0;
@@ -38,35 +62,84 @@ inline bool isLegal(char c){
 	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'));
 }
 
+
 class ThreadPool{
 	vector<thread*> thread_list;
 	bool thread_exit;
 	bool thread_busy[MAX_THREAD];
 
-	void wordCount(string filePath, int id){
+	//void wordCount(string filePath, int id){
+	//	//m_print_lock.lock();
+	//	//printf("Inner: Thread %d: %s\n", id, filePath.c_str());
+	//	//m_print_lock.unlock();
+
+	//	FILE *fp = fopen(filePath.c_str(), "r");
+
+	//	char srcWord[1000];
+	//	int len;
+	//	string curWord;
+
+	//	while (!feof(fp)){
+	//		fscanf(fp, " %s", srcWord);
+	//		len = strlen(srcWord);
+	//		while (len > 0 && !isLegal(srcWord[len - 1])) len--;
+	//		if (len == 0) continue;
+	//		srcWord[len] = '\0';
+	//		curWord = string(srcWord);
+
+	//		if (M_thread[id].find(curWord) == M_thread[id].end())
+	//			M_thread[id][curWord] = 1;
+	//		else
+	//			M_thread[id][curWord]++;
+	//	}
+	//	fclose(fp);
+	//}
+
+	void wordCount2(string filePath, int id){
+		FILE *fp = fopen(filePath.c_str(), "rb");
+		if (fp == NULL){
+			m_print_lock.lock();
+			printf("Thread %d: Not Found File => %s\n", id, filePath.c_str());
+			m_print_lock.unlock();
+			return;
+		}
+		int file_len = 0;
+		fseek(fp, 0, SEEK_END);
+		file_len = ftell(fp);
+		rewind(fp);
+
+		char *srcWord = new char[file_len + 6];
+		char temp[1000];
+		int word_st = 0, word_len = 0;
+		fread(srcWord, 1, file_len, fp);
+
+		for (int i = 0; i < file_len; i++){
+			if (isLegal(srcWord[i])){
+				//curWord = curWord + srcWord[i];
+				temp[word_len++] = srcWord[i];
+				continue;
+			}
+			if (word_len == 0){
+				word_st = i + 1;
+				continue;
+			}
+			temp[word_len] = '\0';
+			WordNode word;
+			strcpy(word.now, temp);
+			word.now[word_len] = '\0';
+
+			if (M_thread[id].find(word) == M_thread[id].end())
+				M_thread[id][word] = 1;
+			else
+				M_thread[id][word]++;
+			word_st = i + 1; word_len = 0;
+		}
+
 		//m_print_lock.lock();
-		//printf("Inner: Thread %d: %s\n", id, filePath.c_str());
+		//printf("Thread %d: Size = %d %s\n", id, file_len, filePath.c_str());
 		//m_print_lock.unlock();
 
-		FILE *fp = fopen(filePath.c_str(), "r");
-
-		char srcWord[1000];
-		int len;
-		string curWord;
-
-		while (!feof(fp)){
-			fscanf(fp, " %s", srcWord);
-			len = strlen(srcWord);
-			while (len > 0 && !isLegal(srcWord[len - 1])) len--;
-			if (len == 0) continue;
-			srcWord[len] = '\0';
-			curWord = string(srcWord);
-
-			if (M_thread[id].find(curWord) == M_thread[id].end())
-				M_thread[id][curWord] = 1;
-			else
-				M_thread[id][curWord]++;
-		}
+		delete [] srcWord;
 		fclose(fp);
 	}
 
@@ -98,11 +171,11 @@ class ThreadPool{
 			m_print_lock.lock();
 			printf("Start: Thread %d: %s\n", id, nowFile.c_str());
 			m_print_lock.unlock();
-			wordCount(nowFile, id);
+			wordCount2(nowFile, id);
 
-			m_print_lock.lock();
-			printf("Complete: Thread %d: %s\n", id, nowFile.c_str());
-			m_print_lock.unlock();
+			//m_print_lock.lock();
+			//printf("Complete: Thread %d: %s\n", id, nowFile.c_str());
+			//m_print_lock.unlock();
 		}
 		/*m_print_lock.lock();
 		printf("Thread %d exit\n", id);
@@ -120,7 +193,7 @@ class ThreadPool{
 			l_thread.join(); r_thread.join();
 		}
 		mid++;
-		map<string, int>::iterator it;
+		Map_PtrChar_Int::iterator it;
 		for (it = M_thread[mid].begin(); it != M_thread[mid].end(); it++){
 			if (M_thread[l].find(it->first) == M_thread[l].end())
 				M_thread[l][it->first] = it->second;
@@ -149,7 +222,7 @@ public:
 	void merge(){
 		setTime("Single Merge");
 		M.clear();
-		map<string, int>::iterator it;
+		Map_PtrChar_Int::iterator it;
 		for (int id = 0; id < thread_list.size(); id++){
 			for (it = M_thread[id].begin(); it != M_thread[id].end(); it++){
 				if (M.find(it->first) == M.end())
@@ -180,40 +253,40 @@ public:
 
 };
 
-void wordCount(string & filePath){
-	cout << filePath << endl;
-	FILE *fp = fopen(filePath.c_str(), "r");
-	char srcWord[100];
-	int len;
-	string curWord;
-
-	while (!feof(fp)){
-		fscanf(fp, " %s", srcWord);
-		len = strlen(srcWord);
-		while (len > 0 && !isLegal(srcWord[len - 1])) len--;
-		if (len == 0) continue;
-		srcWord[len] = '\0';
-		curWord = string(srcWord);
-		if (M.find(curWord) == M.end()) 
-			M[curWord] = 1;
-		else
-			M[curWord]++;
-	}
-	fclose(fp);
-}
+//void wordCount(string & filePath){
+//	cout << filePath << endl;
+//	FILE *fp = fopen(filePath.c_str(), "r");
+//	char srcWord[100];
+//	int len;
+//	string curWord;
+//
+//	while (!feof(fp)){
+//		fscanf(fp, " %s", srcWord);
+//		len = strlen(srcWord);
+//		while (len > 0 && !isLegal(srcWord[len - 1])) len--;
+//		if (len == 0) continue;
+//		srcWord[len] = '\0';
+//		curWord = string(srcWord);
+//		if (M.find(curWord) == M.end()) 
+//			M[curWord] = 1;
+//		else
+//			M[curWord]++;
+//	}
+//	fclose(fp);
+//}
 
 bool compareByValue(const PSI & A, const PSI & B){
 	return A.second > B.second;
 }
 struct cmp{
 	bool operator ()(const PSI & A, const PSI & B){
-		if (A.second == B.second) return A.first < B.first;
+		if (A.second == B.second) return strcmp(A.first.now, B.first.now) < 0;;
 		return A.second > B.second;
 	}
 };
 
 
-void find_topN_by_sort(map<string, int> & M, int topN){
+void find_topN_by_sort(Map_PtrChar_Int & M, int topN){
 	setTime("find_topN_by_sort");
 
 	vector< PSI > A(M.begin(), M.end());
@@ -221,18 +294,18 @@ void find_topN_by_sort(map<string, int> & M, int topN){
 	sort(A.begin(), A.end(), compareByValue);
 
 	for (int i = 0; i < topN; i++){
-		printf("%s %d\n", A[i].first.c_str(), A[i].second);
+		printf("%s %d\n", A[i].first.now, A[i].second);
 	}
 	
 	getTime("find_topN_by_sort");
 }
 
-void find_topN_by_heap(map<string, int> & M, int topN){
+void find_topN_by_heap(Map_PtrChar_Int & M, int topN){
 	setTime("find_topN_by_heap");
 	priority_queue<PSI, vector<PSI>, cmp> Q;
 	while (!Q.empty()) Q.pop();
 
-	map<string, int>::iterator it;
+	Map_PtrChar_Int::iterator it;
 	int cnt = 0;
 	for (it = M.begin(), cnt = 0; it != M.end() && cnt < topN; it++, cnt++) 
 		Q.push(*it);
@@ -248,7 +321,7 @@ void find_topN_by_heap(map<string, int> & M, int topN){
 		Q.pop();
 	}
 	for (int i = output.size() - 1; i >= 0; i--)
-		printf("%s %d\n", output[i].first.c_str(), output[i].second);
+		printf("%s %d\n", output[i].first.now, output[i].second);
 	
 	getTime("find_topN_by_heap");
 }
@@ -287,7 +360,7 @@ int main(void)
 	//dfsFolder("novel\\AB");
 	//find_topN_by_heap(topN);
 	
-	dfsFolder("novel");
+	dfsFolder("novel\\AB");
 
 	setTime("Word Count");
 	ThreadPool thread_pool(MAX_THREAD);
@@ -311,6 +384,7 @@ int main(void)
 	cout << endl << "Program Completed!" << endl;
 	
 	
+	getchar();
 	getchar();
 	getchar();
 	return 0;
