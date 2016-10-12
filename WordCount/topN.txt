@@ -1,58 +1,1721 @@
-the 324065
-and 160592
-to 150771
-of 134458
-a 108138
-I 93409
-was 86510
-in 80766
-that 65604
-he 60774
-had 59718
-his 58237
-it 56907
-you 51872
-her 50128
-as 42390
-with 41723
-for 38268
-on 37874
-at 33355
+ALL Result:
+
+MAX_THREAD = 64
+N = 100
+
+-------------Word Count--------------
+
+Start: Thread 0: novel\.picasa.ini
+Start: Thread 1: novel\AB\AC.TheMysteriousAffairatStyles.txt
+Start: Thread 2: novel\AB\AH.TheFinalDiagnosis.txt
+Start: Thread 0: novel\AB\AlistairMacLean.BearIsland.txt
+Start: Thread 3: novel\AB\AlistairMaclean.IceStationZebra.txt
+Start: Thread 4: novel\AB\AlistairMaclean.NightWithoutEnd.txt
+Start: Thread 5: novel\AB\AlistairMaclean.Seawitch.txt
+Start: Thread 6: novel\AB\AlistairMaclean.TheGunsOfNavaronne.txt
+Start: Thread 7: novel\AB\AM.TheCrystalSinger.txt
+Start: Thread 8: novel\AB\AMC.Crystal.Line.txt
+Start: Thread 9: novel\AB\AMC.Damia.txt
+Start: Thread 10: novel\AB\AMC.DamiasChildren.txt
+Start: Thread 11: novel\AB\AMC.Killashandra.txt
+Start: Thread 12: novel\AB\AMC.LyonsPride.txt
+Start: Thread 13: novel\AB\AMC.MasterharperofPern.txt
+Start: Thread 14: novel\AB\AMC.TheRowan.txt
+Start: Thread 15: novel\AB\AMcCaffrey.TheSkiesOfPern.txt
+Start: Thread 16: novel\AB\AMilne.Vinni.txt
+Start: Thread 17: novel\AB\AnneR.BloodandGold(v2).txt
+Start: Thread 18: novel\AB\AnneR.BloodandGold.txt
+Start: Thread 19: novel\AB\AnneR.Lasher.txt
+Start: Thread 20: novel\AB\AnneR.MemnochTheDevil.txt
+Start: Thread 21: novel\AB\AnneR.ServantOfTheBones.txt
+Start: Thread 22: novel\AB\AnneR.TheMummy.txt
+Start: Thread 23: novel\AB\AnneR.TheTaleOfTheBodyThief.txt
+Start: Thread 24: novel\AB\AnneR.TheVampireArmand.txt
+Start: Thread 25: novel\AB\AnneR.TheWitchingHour.txt
+Start: Thread 26: novel\AB\AnneR.VittorioTheVampire.txt
+Start: Thread 27: novel\AB\AnnR.Interview.With.The.Vampire.txt
+Start: Thread 28: novel\AB\AnnR.Merrick.txt
+Start: Thread 29: novel\AB\AnnR.Pandora.txt
+Start: Thread 30: novel\AB\AnnR.QueenOfTheDamned.txt
+Start: Thread 31: novel\AB\AnnR.TheClaimingofSleepingBeauty.txt
+Start: Thread 16: novel\AB\AnnRice.The.Vampire.Lestat.txt
+Start: Thread 32: novel\AB\Atlantis.Found.txt
+Start: Thread 34: novel\AB\BCornwell.BattleFlag.txt
+Start: Thread 35: novel\AB\BCornwell.SharpesCompany.txt
+Start: Thread 36: novel\AB\BCornwell.SharpesFortress.txt
+Start: Thread 37: novel\AB\BCornwell.SharpesRegiment.txt
+Start: Thread 33: novel\AB\BCornwell.SharpesRifles.txt
+Start: Thread 38: novel\AB\BCornwell.SharpesTriumph.txt
+Start: Thread 39: novel\AB\BCornwell.SharpsTiger.txt
+Start: Thread 40: novel\AB\BernardCornwell.Sharpe'sGold.txt
+Start: Thread 41: novel\AB\BH.HouseAtreides.txt
+Start: Thread 42: novel\AB\BILL_The_Galactic_Hero_v1.1.txt
+Start: Thread 43: novel\AB\BL.Necroscope.txt
+Start: Thread 44: novel\AB\BL.Necroscope2.txt
+Start: Thread 45: novel\AB\BL.Necroscope3.txt
+Start: Thread 46: novel\AB\BLumley.Psychomech.txt
+Start: Thread 47: novel\C\CACB.TheFarKingdoms.txt
+Start: Thread 48: novel\C\CACB.TheWolfWorlds.txt
+Start: Thread 49: novel\C\CB.BooksOfBlood.txt
+Start: Thread 50: novel\C\CB.Booksofblood2.txt
+Start: Thread 51: novel\C\CB.Coldheart Canyon.txt
+Start: Thread 52: novel\C\CB.DamnationGame.txt
+Start: Thread 53: novel\C\CB.GreatSecretShow.txt
+Start: Thread 54: novel\C\CB.Imajica1.txt
+Start: Thread 55: novel\C\CB.Imajica2.txt
+Start: Thread 56: novel\C\CB.TheHellboundHeart.txt
+Start: Thread 57: novel\C\CB.TorturedSouls.txt
+Start: Thread 1: novel\C\CB_BookOfBlood06.txt
+Start: Thread 58: novel\C\CB_BooksOfBlood04.txt
+Start: Thread 59: novel\C\CB_BooksOfBlood05.txt
+Start: Thread 60: novel\C\CC.DeepSix.txt
+Start: Thread 61: novel\C\CC.FireIce.txt
+Start: Thread 62: novel\C\CC.FloodTide.txt
+Start: Thread 63: novel\C\CC.GoldenBuddha.txt
+Start: Thread 57: novel\C\CC.Iceberg.txt
+Start: Thread 5: novel\C\CC.NightProbe!.txt
+Start: Thread 10: novel\C\CC.PacificVortex.txt
+Start: Thread 56: novel\C\CC.TheMediterraneanCaper2.txt
+Start: Thread 8: novel\C\CC.Treasure.txt
+Start: Thread 4: novel\C\CC.TrojanOdyssey.txt
+Start: Thread 26: novel\C\CC.Valhalla Rising.txt
+Start: Thread 11: novel\C\CC.Vixen03.txt
+Start: Thread 3: novel\C\CC.WhiteDeath.txt
+Start: Thread 31: novel\C\CH.BasketCase.txt
+Start: Thread 50: novel\C\CH.DoubleWhammy.txt
+Start: Thread 12: novel\C\CH.LuckyYou.txt
+Start: Thread 42: novel\C\CH.NakedCameTheManatee.txt
+Start: Thread 7: novel\C\CH.NativeTongue.txt
+Start: Thread 14: novel\C\CH.SickPuppy.txt
+Start: Thread 58: novel\C\CH.TheCrazyKill.txt
+Start: Thread 6: novel\C\CH.TheRealCoolKillers.txt
+Start: Thread 9: novel\C\CHiaasen.StormyWeather.txt
+Start: Thread 49: novel\C\CHiaasen.TouristSeason.txt
+Start: Thread 59: novel\C\ChM.PerdidoStreetStation.txt
+Start: Thread 1: novel\C\chuckpalahniuk.fightclub.txt
+Start: Thread 40: novel\C\Clive Cussler.Serpent.txt
+Start: Thread 29: novel\C\CP.CreaturesOfForever.txt
+Start: Thread 33: novel\C\CP.EvilThirst.txt
+Start: Thread 0: novel\C\CP.Phantom.txt
+Start: Thread 2: novel\C\CP.RedDice.txt
+Start: Thread 35: novel\C\CP.TheLastVampire2.txt
+Start: Thread 48: novel\C\CPatricia.AllThatRemains.txt
+Start: Thread 28: novel\C\CPatricia.BlackNotice.txt
+Start: Thread 13: novel\C\CPatricia.PointofOrigin.txt
+Start: Thread 37: novel\C\CPatricia.UnnaturalExposure.txt
+Start: Thread 42: novel\C\CPike.TheLastVampire.txt
+Start: Thread 27: novel\C\CSF.MrMidshipmanHornblower.txt
+Start: Thread 36: novel\C\CSF.TheCommodore.txt
+Start: Thread 57: novel\C\CSL.TheHorseAndHisBoy.txt
+Start: Thread 10: novel\C\CSL.TheLionTheWitchAndTheWardrobe.txt
+Start: Thread 6: novel\C\CSL.TheMagiciansNephew.txt
+Start: Thread 22: novel\C\CSpector.WorldWithoutEnd.txt
+Start: Thread 21: novel\C\Cussler.BlueandGold.txt
+Start: Thread 56: novel\C\CW.BlackAlibi.txt
+Start: Thread 1: novel\C\CW.IMarriedADeadMan.txt
+Start: Thread 0: novel\C\CWilleford.Cockfighter.txt
+Start: Thread 63: novel\C\CWilleford.MiamiBlues.txt
+Start: Thread 29: novel\C\CWilleford.NewHopeForTheDead.txt
+Start: Thread 35: novel\C\CWilleford.PickUp.txt
+Start: Thread 38: novel\C\CWilleford.Sideswipe.txt
+Start: Thread 34: novel\C\CWilleford.TheBurntOrangeHeresy.txt
+Start: Thread 58: novel\C\CWilleford.TheSharkInfestedCustard.txt
+Start: Thread 51: novel\C\CWilleford.TheWayWeDieNow.txt
+Start: Thread 20: novel\C\Cyclops.txt
+Start: Thread 39: novel\DE\DA.LifetheUniverseandEverything.txt
+Start: Thread 61: novel\DE\DA.MostlyHarmless.txt
+Start: Thread 15: novel\DE\DA.SoLongandThanksforalltheFish.txt
+Start: Thread 46: novel\DE\DA.TheHitchHikersGuidetotheGalaxy.txt
+Start: Thread 5: novel\DE\DA.TheRestaurantattheEndoftheUniverse.txt
+Start: Thread 2: novel\DE\DanBrown.Angels&Demons.txt
+Start: Thread 60: novel\DE\DanBrown.DeceptionPoint.txt
+Start: Thread 42: novel\DE\DanBrown.DigitalFortress.txt
+Start: Thread 10: novel\DE\DanBrown.TheDaVinciCode.txt
+Start: Thread 44: novel\DE\DClegg.Purity.txt
+Start: Thread 33: novel\DE\Dean Koontz - The Mask.txt
+Start: Thread 23: novel\DE\Deathworld.2.txt
+Start: Thread 50: novel\DE\Deathworld.3.txt
+Start: Thread 6: novel\DE\Deathworld.txt
+Start: Thread 18: novel\DE\DEMILLE.TheGeneralsDaughter.txt
+Start: Thread 57: novel\DE\DF.Banker.txt
+Start: Thread 45: novel\DE\DF.FlyingFinish.txt
+Start: Thread 3: novel\DE\DF.Forfeit.txt
+Start: Thread 14: novel\DE\DF.Longshot.txt
+Start: Thread 43: novel\DE\DF.Smokescreen.txt
+Start: Thread 11: novel\DE\DF.TheEdge.txt
+Start: Thread 31: novel\DE\DF.TheRunelords.txt
+Start: Thread 32: novel\DE\DF.WhipHand.txt
+Start: Thread 44: novel\DE\DF_ComeToGrief.txt
+Start: Thread 17: novel\DE\DF_FieldOf13.txt
+Start: Thread 24: novel\DE\DH.TheAdventuresOfSamSpade.txt
+Start: Thread 54: novel\DE\DH.TheDainCurse.txt
+Start: Thread 34: novel\DE\DH.TheGlassKey.txt
+Start: Thread 47: novel\DE\DH.TheMalteseFalcon.txt
+Start: Thread 22: novel\DE\DH.TheThinMan.txt
+Start: Thread 7: novel\DE\DK.Coldfire.txt
+Start: Thread 1: novel\DE\DK.DemonSeed.txt
+Start: Thread 39: novel\DE\DK.InCornerOfEye.txt
+Start: Thread 41: novel\DE\DK.Intensity.txt
+Start: Thread 46: novel\DE\DK.Lightning.txt
+Start: Thread 15: novel\DE\DK.NightChills.txt
+Start: Thread 30: novel\DE\DK.OneDoorAwayFromHeaven.txt
+Start: Thread 12: novel\DE\DK.SantasTwin.txt
+Start: Thread 63: novel\DE\DK.SoleSurvivor.txt
+Start: Thread 49: novel\DE\DK.StrangeHighways.txt
+Start: Thread 62: novel\DE\DK.TheDoorToDecember.txt
+Start: Thread 35: novel\DE\DK.Ticktock.txt
+Start: Thread 55: novel\DE\DK.Watchers.txt
+Start: Thread 52: novel\DE\DKP_TheMinorityReportAndOtherStories.txt
+Start: Thread 56: novel\DE\DMorrell.FirstBlood.txt
+Start: Thread 19: novel\DE\DouglasHill.GalacticWarlord.txt
+Start: Thread 12: novel\DE\Dragon.txt
+Start: Thread 37: novel\DE\DW.JimmytheKid.txt
+Start: Thread 9: novel\DE\DW.WhatstheWorstThatCouldHappen.txt
+Start: Thread 27: novel\DE\DWestlake.BankShot.txt
+Start: Thread 48: novel\DE\EarlDerrBiggers.TheHouseWithoutAKey.txt
+Start: Thread 13: novel\DE\EColfer.ArtemisFowl.txt
+Start: Thread 28: novel\DE\EL.AngelEyes.txt
+Start: Thread 61: novel\DE\EL.FloatingCity.txt
+Start: Thread 0: novel\DE\EL.Kaisho.txt
+Start: Thread 4: novel\DE\EL.The Miko.txt
+Start: Thread 29: novel\DE\ElizabethPeters.HeShallThunderintheSky.txt
+Start: Thread 5: novel\DE\ElizabethPeters.TheGoldenOne.txt
+Start: Thread 53: novel\DE\ElizabethPeters.TheLastCamelDiedatNoon.txt
+Start: Thread 40: novel\DE\EM.HuntingParty.txt
+Start: Thread 51: novel\DE\EM.OathofGold.txt
+Start: Thread 36: novel\DE\EM.OnceAHero.txt
+Start: Thread 26: novel\DE\EMB.HeWhoHesitates.txt
+Start: Thread 23: novel\DE\EMB.SeeThemDie.txt
+Start: Thread 58: novel\DE\EPeters.AMorbidTasteForBones .txt
+Start: Thread 38: novel\DE\EPeters.OneCorpseTooMany.txt
+Start: Thread 6: novel\DE\EricLustbader.The Ninja.txt
+Start: Thread 21: novel\DE\ErleStanleyGardne.TheCaseOfTheDaringDivorcee.txt
+Start: Thread 43: novel\DE\ErleStanleyGardner.The.caseoftheSULKYGIRL.txt
+Start: Thread 8: novel\DE\ErleStanleyGardner.THECASEOFTHECARETAKERSCAT.txt
+Start: Thread 16: novel\DE\ErleStanleyGardner.THECASEOFTHECOUNTERFEITEYE.txt
+Start: Thread 24: novel\DE\ErleStanleyGardner.TheCaseOfTheHorrifiedHeirs.txt
+Start: Thread 3: novel\DE\ErleStanleyGardner.ThecaseoftheLuckyLegs.txt
+Start: Thread 19: novel\DE\ErleStanleyGardnerTHECASEOFTHECURIOUSBRIDE.txt
+Start: Thread 33: novel\DE\ErleStenlyGardner.THECASEOFTHEHOWLINGDOG.txt
+Start: Thread 50: novel\DE\ESG.TheCaseOfTheVelvetClaws.txt
+Start: Thread 22: novel\DE\ESG_TheCaseOfTheBlondeBonanza.txt
+Start: Thread 45: novel\DE\ESG_TheCaseOfTheDangerousDowager.txt
+Start: Thread 42: novel\DE\ESG_TheCaseOfTheSingingSkirt.txt
+Start: Thread 1: novel\DE\ESG_TheCaseOfTheSleepwalkersNiece.txt
+Start: Thread 34: novel\DE\ESG_TheCaseOfTheStutteringBishop.txt
+Start: Thread 47: novel\DE\ESG_TheCaseOfTheTroubledTrustee.txt
+Start: Thread 32: novel\F-I\FB.OzmaOfOz.txt
+Start: Thread 37: novel\F-I\FB.TheMarvelousLandOfOz.txt
+Start: Thread 17: novel\F-I\FForsyth.TheDayoftheJackal.txt
+Start: Thread 54: novel\F-I\FH.ChapterhouseDune.txt
+Start: Thread 57: novel\F-I\FH.ChildrenofDune.txt
+Start: Thread 27: novel\F-I\FH.Dune.txt
+Start: Thread 14: novel\F-I\FH.DuneMessiah.txt
+Start: Thread 13: novel\F-I\FH.GodEmperorofDune.txt
+Start: Thread 23: novel\F-I\FH.HereticsofDune.txt
+Start: Thread 26: novel\F-I\FrBaum.WonderfulWizardOZ.txt
+Start: Thread 56: novel\F-I\FS.TheFirstBookofSwords.txt
+Start: Thread 44: novel\F-I\FS.TheSecondBookofSwords.txt
+Start: Thread 24: novel\F-I\FS.TheThirdBookofSwords.txt
+Start: Thread 20: novel\F-I\FS.WoundhealersStory.txt
+Start: Thread 11: novel\F-I\GC.BlackCompany.txt
+Start: Thread 60: novel\F-I\GC.BleakSeasons7.txt
+Start: Thread 48: novel\F-I\GC.ShadowGames.txt
+Start: Thread 21: novel\F-I\GC.ShadowsLinger.txt
+Start: Thread 35: novel\F-I\GC.Swordbearer.txt
+Start: Thread 15: novel\F-I\GC.TheWhiteRose.txt
+Start: Thread 16: novel\F-I\GeorgeRRMartin.DyingoftheLight.txt
+Start: Thread 38: novel\F-I\GGK.ASongforArbonne.txt
+Start: Thread 33: novel\F-I\GGK.TheDarkestRoad.txt
+Start: Thread 8: novel\F-I\GGK.TheLionsofAl-Rassan.txt
+Start: Thread 22: novel\F-I\GGK.TheSummerTree.txt
+Start: Thread 32: novel\F-I\GGK.TheWanderingFire.txt
+Start: Thread 10: novel\F-I\GGK.Tigana.txt
+Start: Thread 37: novel\F-I\GM.DeathDream.txt
+Start: Thread 9: novel\F-I\GM.DeathTrance.txt
+Start: Thread 19: novel\F-I\GM.TheSphinx.txt
+Start: Thread 43: novel\F-I\GM.TheWellsOfHell.txt
+Start: Thread 59: novel\F-I\GNS.Accursed.txt
+Start: Thread 47: novel\F-I\GNS.BatsOutOfHell.txt
+Start: Thread 42: novel\F-I\GNS.BloodCircuit.txt
+Start: Thread 45: novel\F-I\GNS.CannibalCult.txt
+Start: Thread 34: novel\F-I\GNS.Snakes.txt
+Start: Thread 1: novel\F-I\GNS.TheBloodMerchants.txt
+Start: Thread 58: novel\F-I\GNS.TheDruidConnection.txt
+Start: Thread 3: novel\F-I\GNS.TheGraveyardVultures.txt
+Start: Thread 2: novel\F-I\GNS.TheLurkers.txt
+Start: Thread 50: novel\F-I\GNS.ThePlutoPact.txt
+Start: Thread 26: novel\F-I\GNS.TheSlimeBeast.txt
+Start: Thread 41: novel\F-I\GNS.TheWood.txt
+Start: Thread 18: novel\F-I\GNS.Throwback.txt
+Start: Thread 63: novel\F-I\Goldman.ThePrincessBride.txt
+Start: Thread 62: novel\F-I\GreenMile.txt
+Start: Thread 46: novel\F-I\GRRM.AClashofKings.txt
+Start: Thread 7: novel\F-I\GRRM.AGameofThrones.txt
+Start: Thread 14: novel\F-I\GRRM.AStormofSwords.txt
+Start: Thread 40: novel\F-I\GRRM.TheHedgeKnight.txt
+Start: Thread 26: novel\F-I\GS.EarthAbides.txt
+Start: Thread 47: novel\F-I\GW.TheClawoftheConciliator.txt
+Start: Thread 53: novel\F-I\GW.TheShadowoftheTorturer.txt
+Start: Thread 45: novel\F-I\HBPiper.FuzziesAndOtherPeople.txt
+Start: Thread 34: novel\F-I\HBPiper.FuzzySapiens.txt
+Start: Thread 36: novel\F-I\HBPiper.TheLittleFuzzy.txt
+Start: Thread 1: novel\F-I\HFilding.BridgetJonesDiary.txt
+Start: Thread 58: novel\F-I\HH.TheSSRat.Sings.The.Blues.txt
+Start: Thread 19: novel\F-I\HR.TheCarpetbaggers.txt
+Start: Thread 55: novel\F-I\HR.TheRaiders.txt
+Start: Thread 41: novel\F-I\iam fleming.for your eyes only.txt
+Start: Thread 2: novel\F-I\ian fleming.casino royale.txt
+Start: Thread 20: novel\F-I\IanCaldwell&DustinThomason.TheRuleofFour.txt
+Start: Thread 42: novel\F-I\IB.TheWaspFactory.txt
+Start: Thread 52: novel\F-I\IB.WalkingonGlass.txt
+Start: Thread 12: novel\F-I\IF.DaimondsAreForever.txt
+Start: Thread 44: novel\F-I\IF.Dr.No.txt
+Start: Thread 24: novel\F-I\IF.FromRussiawithLove.txt
+Start: Thread 3: novel\F-I\IF.Goldfinger.txt
+Start: Thread 35: novel\F-I\IF.Liveandletdie.txt
+Start: Thread 56: novel\F-I\IF.Moonraker.txt
+Start: Thread 11: novel\F-I\IF.Octopussy.txt
+Start: Thread 48: novel\F-I\IF.OnHerMajesty'sSecretService.txt
+Start: Thread 29: novel\F-I\IF.TheManwiththeGoldenGun.txt
+Start: Thread 31: novel\F-I\IF.TheSpyWhoLovedMe.txt
+Start: Thread 21: novel\F-I\IF.Thunderball.txt
+Start: Thread 40: novel\F-I\IF.YouOnlyLiveTwice.txt
+Start: Thread 60: novel\F-I\Inca.Gold.txt
+Start: Thread 50: novel\J-L\JAK.TheMothmanProphecies.txt
+Start: Thread 59: novel\J-L\JamesClavell.NobleHouse.txt
+Start: Thread 51: novel\J-L\JamesEllroy.Clandestine.txt
+Start: Thread 61: novel\J-L\JamesEllroy.CrimeWave.txt
+Start: Thread 5: novel\J-L\JamesEllroy.L.A.Confidential.txt
+Start: Thread 43: novel\J-L\JamesEllroy.WhiteJazz.txt
+Start: Thread 49: novel\J-L\JamesRollins.Amazonia.txt
+Start: Thread 17: novel\J-L\JamesRollins.DeepFathom.txt
+Start: Thread 32: novel\J-L\JClavell.Shogun.txt
+Start: Thread 15: novel\J-L\JDavid.FootprintsofThunder.txt
+Start: Thread 37: novel\J-L\JDickey.Deliverance.txt
+Start: Thread 54: novel\J-L\JE.TheBlackDahlia.txt
+Start: Thread 57: novel\J-L\JeffLong.YearZero.txt
+Start: Thread 18: novel\J-L\JeffRovin.Fatalis.txt
+Start: Thread 11: novel\J-L\JG.ATimetoKill.txt
+Start: Thread 30: novel\J-L\JG.PaintedHouse.txt
+Start: Thread 16: novel\J-L\JG.SkippingChristmas.txt
+Start: Thread 13: novel\J-L\JG.TheBrethren.txt
+Start: Thread 39: novel\J-L\JG.TheChamber.txt
+Start: Thread 45: novel\J-L\JG.TheClient.txt
+Start: Thread 63: novel\J-L\JG.TheFirm.txt
+Start: Thread 0: novel\J-L\JG.ThePartner.txt
+Start: Thread 2: novel\J-L\JG.ThePelicanBrief.txt
+Start: Thread 36: novel\J-L\JG.TheRainmaker.txt
+Start: Thread 22: novel\J-L\JG.TheSummons.txt
+Start: Thread 28: novel\J-L\JG.The_Street_Lawyer.txt
+Start: Thread 34: novel\J-L\JH.Catch22.txt
+Start: Thread 1: novel\J-L\JH.TheLastplaceGodMade.txt
+Start: Thread 58: novel\J-L\JHerbert.Sepulchre.txt
+Start: Thread 41: novel\J-L\JKRowling.HarryPotterandCS.txt
+Start: Thread 42: novel\J-L\JKRowling.HarryPotterandGF.txt
+Start: Thread 29: novel\J-L\JKRowling.HarryPotterandSS.txt
+Start: Thread 6: novel\J-L\JKRowling.HP&TheOrderOfPhenix.txt
+Start: Thread 23: novel\J-L\JKRowlingHarryPotterandPA.txt
+Start: Thread 31: novel\J-L\JohnGardner.Goldeneye.txt
+Start: Thread 16: novel\J-L\JohnGardner.NeverSendFlowers.txt
+Start: Thread 35: novel\J-L\JohnGardner.RollOfHonor.txt
+Start: Thread 12: novel\J-L\JohnGardner.Seafire.txt
+Start: Thread 47: novel\J-L\JohnGardner.WinLoseOrDie.txt
+Start: Thread 25: novel\J-L\JP.CradleAndAll.txt
+Start: Thread 9: novel\J-L\JPatterson.PopGoestheWeasel.txt
+Start: Thread 4: novel\J-L\JR.Shapechangers.txt
+Start: Thread 24: novel\J-L\JRT.FellowshipofRing.txt
+Start: Thread 44: novel\J-L\JRT.ReturnTheKing.txt
+Start: Thread 56: novel\J-L\JRT.The Hobbit.txt
+Start: Thread 40: novel\J-L\JRT.TwoTowers.txt
+Start: Thread 53: novel\J-L\JS&CS.BookOfTheDead.txt
+Start: Thread 52: novel\J-L\JS&CS.TheBridge.txt
+Start: Thread 33: novel\J-L\JS&CS.TheLightAtTheEnd.txt
+Start: Thread 48: novel\J-L\JS&CS.TheScream.txt
+Start: Thread 21: novel\J-L\Jurassic.Park.txt
+Start: Thread 27: novel\J-L\JVornholt.Voices.txt
+Start: Thread 3: novel\J-L\KJAnderson.LXG.txt
+Start: Thread 50: novel\J-L\KKenOneFlewOvertheCuckoosNest.txt
+Start: Thread 62: novel\J-L\KutzKatherin.TheKingsJustice.txt
+Start: Thread 20: novel\J-L\KutzKatherin.TheQuestforSaintCamber.txt
+Start: Thread 26: novel\J-L\KutzKattherine.The BishopsHeir.txt
+Start: Thread 37: novel\J-L\LeCarre.TheSpyWhoCame.txt
+Start: Thread 38: novel\J-L\LH.CaressofTwilight.txt
+Start: Thread 43: novel\J-L\LH.KissofShadows.txt
+Start: Thread 31: novel\J-L\LH.NarcissusinChains.txt
+Start: Thread 55: novel\J-L\LHamilton.Thebluemoon.txt
+Start: Thread 61: novel\J-L\LHamilton.Thekillingdance.txt
+Start: Thread 1: novel\J-L\LLA.LastoftheBreed.txt
+Start: Thread 8: novel\J-L\LLA.Sackett.txt
+Start: Thread 35: novel\J-L\LLA.TheBurningHills.txt
+Start: Thread 51: novel\J-L\LLA.TheLonelyMen.txt
+Start: Thread 25: novel\J-L\LMB.BARRAYAR.txt
+Start: Thread 13: novel\J-L\LMB.BORDERSOFINFINITY.txt
+Start: Thread 22: novel\J-L\LMB.BrothersInArms.txt
+Start: Thread 18: novel\J-L\LMB.Cetaganda.txt
+Start: Thread 54: novel\J-L\LMB.ETHANOFATHOS.txt
+Start: Thread 28: novel\J-L\LMB.FallingFree.txt
+Start: Thread 16: novel\J-L\LMB.Komarr.txt
+Start: Thread 29: novel\J-L\LMB.MirrorDance.txt
+Start: Thread 5: novel\J-L\LMB.SHARDSOFHONOR.txt
+Start: Thread 41: novel\J-L\LMB.THEVORGAME.txt
+Start: Thread 47: novel\J-L\LMB.TheWarriorsApprentice.txt
+Start: Thread 12: novel\J-L\LRH.DeathQuest.txt
+Start: Thread 30: novel\J-L\LRH.FortuneofFear.txt
+Start: Thread 2: novel\J-L\LRH.VillainyVictorious.txt
+Start: Thread 3: novel\J-L\LRH.VoyageofVengeance.txt
+Start: Thread 49: novel\J-L\LSdC.TheClocksOfIraz.txt
+Start: Thread 17: novel\J-L\LSdC.TheUndesiredPrincess.txt
+Start: Thread 0: novel\J-L\LSdeC.LestDarknessFall.txt
+Start: Thread 58: novel\M-P\MAC.ThePearlHarborMurders.txt
+Start: Thread 8: novel\M-P\MarcCerasini.AVP.txt
+Start: Thread 35: novel\M-P\MAS.OnceAHero.txt
+Start: Thread 27: novel\M-P\MB.AdvOfPeterPan.txt
+Start: Thread 9: novel\M-P\MC.Airframe.txt
+Start: Thread 56: novel\M-P\MC.EatersoftheDead.txt
+Start: Thread 63: novel\M-P\MC.Prey.txt
+Start: Thread 57: novel\M-P\MC.RisingSun.txt
+Start: Thread 10: novel\M-P\MC.TheAndromedaStrein.txt
+Start: Thread 23: novel\M-P\MC.TheGreatTrainRobbery.txt
+Start: Thread 4: novel\M-P\MC.TheTerminalMan.txt
+Start: Thread 37: novel\M-P\McK.Genesis.txt
+Start: Thread 52: novel\M-P\McK.HarpistintheWind.txt
+Start: Thread 51: novel\M-P\McK.HeirofSeaandFire.txt
+Start: Thread 45: novel\M-P\McK.TheRiddlemasterofHed.txt
+Start: Thread 60: novel\M-P\MCS.HavanaBay.txt
+Start: Thread 11: novel\M-P\MG.CityofCrime.txt
+Start: Thread 54: novel\M-P\MG.CrimeInsured.txt
+Start: Thread 17: novel\M-P\MG.Cyro.txt
+Start: Thread 33: novel\M-P\MG.DeathRidestheSkyway.txt
+Start: Thread 21: novel\M-P\MG.DictatorOfCrime.txt
+Start: Thread 53: novel\M-P\MG.GreenEyes.txt
+Start: Thread 48: novel\M-P\Michael Crichton.Congo.txt
+Start: Thread 62: novel\M-P\MILLER.ACanticleForLeibowitz.txt
+Start: Thread 58: novel\M-P\MK.Disclosure.txt
+Start: Thread 49: novel\M-P\MK.Timeline.txt
+Start: Thread 15: novel\M-P\MMitchell.Gonewiththewind.txt
+Start: Thread 50: novel\M-P\MOndaatje.TheEnglishPatient.txt
+Start: Thread 44: novel\M-P\MP.Godfather.txt
+Start: Thread 8: novel\M-P\MReilly.IceStation.txt
+Start: Thread 27: novel\M-P\MS.SurvivalZero.txt
+Start: Thread 56: novel\M-P\Myth.Conceptions.txt
+Start: Thread 18: novel\M-P\NC.SunglassesAfterDark.txt
+Start: Thread 36: novel\M-P\NDM.PlumIsland.txt
+Start: Thread 13: novel\M-P\NS.OnTheBeach.txt
+Start: Thread 38: novel\M-P\OSC.AM1.SeventhSon.txt
+Start: Thread 40: novel\M-P\OSC.AM2.RedProphet.txt
+Start: Thread 5: novel\M-P\OSC.AM3.PrenticeAlvin.txt
+Start: Thread 28: novel\M-P\OSC.AM4.AlvinJourneyman.txt
+Start: Thread 0: novel\M-P\OSC.AM5.Heartfire.txt
+Start: Thread 39: novel\M-P\P&C.Brimstone.txt
+Start: Thread 22: novel\M-P\P&C.IceLimit.txt
+Start: Thread 4: novel\M-P\P&C.MountDragon.txt
+Start: Thread 26: novel\M-P\P&C.Relic.txt
+Start: Thread 34: novel\M-P\P&C.StillLifeWithCrows.txt
+Start: Thread 19: novel\M-P\P&C.Thunderhead.txt
+Start: Thread 25: novel\M-P\PBien.jaws.txt
+Start: Thread 10: novel\M-P\PC.DamesDontCare.txt
+Start: Thread 54: novel\M-P\PDouglas.TheCodex.txt
+Start: Thread 51: novel\M-P\PGW.ADamselInDistress.txt
+Start: Thread 37: novel\M-P\PGW.PiccadillyJim.txt
+Start: Thread 41: novel\M-P\PGW.Psmith,Journalist.txt
+Start: Thread 7: novel\M-P\PGW.SpringFever.txt
+Start: Thread 11: novel\M-P\PGW.ThreeMenandaMaid.txt
+Start: Thread 42: novel\M-P\PGW.UneasyMoney.txt
+Start: Thread 12: novel\M-P\PP.AmberSpyglass.txt
+Start: Thread 17: novel\M-P\PP.TheGoldenCompass.txt
+Start: Thread 23: novel\M-P\PP.TheSubtleKnife.txt
+Start: Thread 47: novel\M-P\Preston&Child.Riptide.txt
+Start: Thread 21: novel\M-P\Preston&Child.TheCabinetofCuriosities.txt
+Start: Thread 16: novel\M-P\PZB.DrawingBlood.txt
+Start: Thread 33: novel\M-P\PZB.LostSouls.txt
+Start: Thread 1: novel\R\RA.Another Fine Myth.txt
+Start: Thread 45: novel\R\RA.Hit Or Myth.txt
+Start: Thread 53: novel\R\RA.Myth-ingPersons.txt
+Start: Thread 20: novel\R\RA.Myth-ionImprobable.txt
+Start: Thread 9: novel\R\RA.Myth-NomersAndIm-Pervections.txt
+Start: Thread 30: novel\R\RA.MythDirections.txt
+Start: Thread 55: novel\R\RA.MythIncinAction.txt
+Start: Thread 3: novel\R\RA.MythingPersons.txt
+Start: Thread 56: novel\R\RA.Phules Company.txt
+Start: Thread 24: novel\R\RA.SweetMyth-teryofLife.txt
+Start: Thread 61: novel\R\Raise.The.Titanic.txt
+Start: Thread 52: novel\R\RASalvatore.AttackOfTheClones.txt
+Start: Thread 27: novel\R\RaymondChandler.FarewellMyLovely.txt
+Start: Thread 2: novel\R\RaymondChandler.TheBigSleep.txt
+Start: Thread 46: novel\R\RaymondChandler.TheHighWindow.txt
+Start: Thread 43: novel\R\RC.Playback.txt
+Start: Thread 57: novel\R\RC.TheLadyInTheLake.txt
+Start: Thread 63: novel\R\RC.TheLittleSister.txt
+Start: Thread 60: novel\R\RC.TheLongGoodbye.txt
+Start: Thread 18: novel\R\RC.TheSimpleArtOfMurder.txt
+Start: Thread 48: novel\R\RC.TroubleIsMyBusiness.txt
+Start: Thread 11: novel\R\RH.Assassin'sQuest.txt
+Start: Thread 45: novel\R\RH.ConanTheWarrior.txt
+Start: Thread 50: novel\R\RH.RoyalAssassin.txt
+Start: Thread 41: novel\R\RH.TheAssassinsApprentice.txt
+Start: Thread 38: novel\R\RH.TheInvadersPlan.txt
+Start: Thread 1: novel\R\RichardHoyt.TheDragonPortfolio.txt
+Start: Thread 53: novel\R\RJ.ACrownofSwords.txt
+Start: Thread 9: novel\R\RJ.EyeoftheWorld.txt
+Start: Thread 7: novel\R\RJ.LordofChaos.txt
+Start: Thread 3: novel\R\RJ.RavensPrologue.txt
+Start: Thread 13: novel\R\RJ.TheDragonReborn.txt
+Start: Thread 42: novel\R\RJ.TheFiresofHeaven.txt
+Start: Thread 29: novel\R\RJ.TheGreatHunt.txt
+Start: Thread 30: novel\R\RJ.ThePathofDaggers.txt
+Start: Thread 20: novel\R\RJ.TheShadowRising.txt
+Start: Thread 25: novel\R\RL.TheBourneIdentity.txt
+Start: Thread 51: novel\R\RL.TheBourneUltimatum.txt
+Start: Thread 55: novel\R\RLS.CurseOfTheMummysTomb.txt
+Start: Thread 3: novel\R\RLS.MonsterBlood.txt
+Start: Thread 37: novel\R\RLS.SayCheeseAndDie.txt
+Start: Thread 62: novel\R\RLS.StayOutOfTheBasement.txt
+Start: Thread 6: novel\R\RLS.WelcomeToDeadHouse.txt
+Start: Thread 24: novel\R\RLudlum-Shelby.TheCassandraCompact.txt
+Start: Thread 40: novel\R\RM.Baal.txt
+Start: Thread 35: novel\R\RM.BoysLife.txt
+Start: Thread 0: novel\R\RM.HellHouse.txt
+Start: Thread 43: novel\R\RM.IMTheLegend.txt
+Start: Thread 10: novel\R\RM.Stinger.txt
+Start: Thread 31: novel\R\RM.SwanSong.txt
+Start: Thread 49: novel\R\RM.TheNightBoat.txt
+Start: Thread 58: novel\R\RMarkem.ColonelSun.txt
+Start: Thread 3: novel\R\RMD.DarkSideOfTheDollar.txt
+Start: Thread 55: novel\R\RMD.TheChill.txt
+Start: Thread 62: novel\R\RobertThurston.FalconGuard.txt
+Start: Thread 26: novel\R\RR.Armageddon3.txt
+Start: Thread 5: novel\R\RR.ArmageddonTheMusical.txt
+Start: Thread 28: novel\R\RR.EastOfEaling.txt
+Start: Thread 37: novel\R\RR.TheAntipope.txt
+Start: Thread 23: novel\R\RR.TheBrentfordChainstoreMassacre.txt
+Start: Thread 2: novel\R\RR.TheBrentfordTriangle.txt
+Start: Thread 8: novel\R\RR.TheSproutsofWrath.txt
+Start: Thread 6: novel\R\RR.TheyCameAndAteUs.txt
+Start: Thread 46: novel\R\RRM.Myst_TheBookofAtrus.txt
+Start: Thread 22: novel\R\RS.ChampagneForOne.txt
+Start: Thread 54: novel\R\RS.FamelyAffair.txt
+Start: Thread 52: novel\R\RS.HomicideTrinity.txt
+Start: Thread 56: novel\R\RS.InTheBestFamelies.txt
+Start: Thread 57: novel\R\RS.RubberBand.txt
+Start: Thread 4: novel\R\RS.SomeBuriedCaesar.txt
+Start: Thread 27: novel\R\RS.TheRedBox.txt
+Start: Thread 63: novel\R\RS.TooManyWomen.txt
+Start: Thread 17: novel\R\RS.UndertheAndes.txt
+Start: Thread 45: novel\R\RSERLING.SomethingsAliveontheTitanic.txt
+Start: Thread 34: novel\R\RSpider.CallahansCrosstimeSaloon.txt
+Start: Thread 33: novel\R\RStacy.DoomsdayWarrior.txt
+Start: Thread 19: novel\R\RStout.DeathofaDoxy.txt
+Start: Thread 16: novel\R\RZ.NinePrincesinAmber.txt
+Start: Thread 47: novel\R\RZ.SignoftheUnicorn.txt
+Start: Thread 43: novel\R\RZ.TheCourtsofChaos.txt
+Start: Thread 44: novel\R\RZ.TheGunsofAvalon.txt
+Start: Thread 61: novel\R\RZ.TheHandofOberon.txt
+Start: Thread 36: novel\R\RZ.TrumpsofDoom.txt
+Start: Thread 21: novel\S\Sahara.txt
+Start: Thread 1: novel\S\SC.AWizardinBedlam.txt
+Start: Thread 39: novel\S\SC.AWizardinMind.txt
+Start: Thread 14: novel\S\SCoonts.TheMinotaur.txt
+Start: Thread 54: novel\S\SheriTepper.Necromancer Nine.txt
+Start: Thread 58: novel\S\Shock.Wave.txt
+Start: Thread 0: novel\S\SidneySheldon.AStrangerInTheMirror.txt
+Start: Thread 60: novel\S\SimonRGreen.DeathstalkerLegacy.txt
+Start: Thread 12: novel\S\SK.BagofBones.txt
+Start: Thread 22: novel\S\SK.BlackHouse.txt
+Start: Thread 40: novel\S\SK.Carrie.txt
+Start: Thread 62: novel\S\SK.Cujo.txt
+Start: Thread 2: novel\S\SK.Cycle of the Werewolf.txt
+Start: Thread 23: novel\S\SK.Desperation.txt
+Start: Thread 52: novel\S\SK.dolores.txt
+Start: Thread 19: novel\S\SK.Dreamcatcher.txt
+Start: Thread 28: novel\S\SK.EverythingsEventual.txt
+Start: Thread 5: novel\S\SK.FromBuick.txt
+Start: Thread 33: novel\S\SK.GeraldsGame.txt
+Start: Thread 18: novel\S\SK.GirlWhoLovedTomGordon.txt
+Start: Thread 24: novel\S\SK.IT.txt
+Start: Thread 26: novel\S\SK.Langoliers.txt
+Start: Thread 43: novel\S\SK.Misery.txt
+Start: Thread 63: novel\S\SK.NightmaresAndDreamscapes.txt
+Start: Thread 49: novel\S\SK.NightShift.txt
+Start: Thread 55: novel\S\SK.OnWriting.txt
+Start: Thread 27: novel\S\SK.OnWriting2.txt
+Start: Thread 34: novel\S\SK.PetSematary.txt
+Start: Thread 57: novel\S\SK.Rage.txt
+Start: Thread 3: novel\S\SK.RoseMadder.txt
+Start: Thread 36: novel\S\SK.RunningMan.txt
+Start: Thread 56: novel\S\SK.SalemsLot.txt
+Start: Thread 4: novel\S\SK.SecretWindowSecretGarden.txt
+Start: Thread 37: novel\S\SK.SkeletonCrew.txt
+Start: Thread 47: novel\S\SK.TheDrawingofTheThree.txt
+Start: Thread 8: novel\S\SK.TheGunslinger.txt
+Start: Thread 2: novel\S\SK.TheLibraryPoliceman.txt
+Start: Thread 46: novel\S\SK.THELONGWALK.txt
+Start: Thread 6: novel\S\SK.ThePlant.txt
+Start: Thread 16: novel\S\SK.TheShining.txt
+Start: Thread 44: novel\S\SK.TheSunDog.txt
+Start: Thread 41: novel\S\SK.TheTalisman.txt
+Start: Thread 61: novel\S\SK.TheWasteLands.txt
+Start: Thread 17: novel\S\SK.Thinner.txt
+Start: Thread 32: novel\S\SK.Tommyknockers.txt
+Start: Thread 1: novel\S\SK.WizardAndTheGlass.txt
+Start: Thread 39: novel\S\SKHeartsInAtlantis.txt
+Start: Thread 27: novel\S\SmithWilbur_River God.txt
+Start: Thread 38: novel\S\SRDonaldson.Gilden-Fire.txt
+Start: Thread 54: novel\S\SRDonaldson.Lord.txt
+Start: Thread 40: novel\S\SRDonaldson.TheIllearthWar.txt
+Start: Thread 55: novel\S\SRDonaldson.ThePowerThatPreserves.txt
+Start: Thread 38: novel\S\SRG.Deathstalker.txt
+Start: Thread 57: novel\S\SS.IfTomorrowComes.txt
+Start: Thread 45: novel\S\SSheldon.DoomsdayConspiracy.txt
+Start: Thread 18: novel\S\SSheldon.TellMeYourDreams.txt
+Start: Thread 0: novel\S\Stephen King - Mist.txt
+Start: Thread 59: novel\S\StephenCoonts.Saucer.txt
+Start: Thread 4: novel\T-Z\TC.OPCenter.txt
+Start: Thread 36: novel\T-Z\TC.PatriotGames.txt
+Start: Thread 8: novel\T-Z\TC.RainbowSix.txt
+Start: Thread 25: novel\T-Z\TC.RedRabbit.txt
+Start: Thread 52: novel\T-Z\TC.RedStormRising.txt
+Start: Thread 44: novel\T-Z\TC.TheBearAndTheDragon.txt
+Start: Thread 10: novel\T-Z\TC.ThehuntforRedOctober.txt
+Start: Thread 26: novel\T-Z\TC.WithoutRemors.txt
+Start: Thread 48: novel\T-Z\TG.BLOODOFTHEFOLD.txt
+Start: Thread 2: novel\T-Z\TG.DebtofBones.txt
+Start: Thread 6: novel\T-Z\TG.FaithofFallen.txt
+Start: Thread 46: novel\T-Z\TG.SouloftheFire.txt
+Start: Thread 35: novel\T-Z\TG.Stone of Tears.txt
+Start: Thread 43: novel\T-Z\TG.TempleOfTheWinds.txt
+Start: Thread 62: novel\T-Z\TG.ThePillarsofCreation.txt
+Start: Thread 17: novel\T-Z\TG.WizardFirstRule.txt
+Start: Thread 0: novel\T-Z\TH.Hannibal.txt
+Start: Thread 30: novel\T-Z\TH.Red Dragon.txt
+Start: Thread 2: novel\T-Z\TH.TheSilenceoftheLambs.txt
+Start: Thread 5: novel\T-Z\THE BOURNE SUPREMACY.txt
+Start: Thread 33: novel\T-Z\The Stainless Steel Rat.txt
+Start: Thread 21: novel\T-Z\The.Lost.World.txt
+Start: Thread 51: novel\T-Z\The.Stainless.Steel.Rat.Joins.the.Circus.txt
+Start: Thread 50: novel\T-Z\The.Stainless.Steel.Rats.Revenge.txt
+Start: Thread 49: novel\T-Z\TheDestroyer.DeathCheck.txt
+Start: Thread 13: novel\T-Z\TheDestroyer.DestroyerCreated.txt
+Start: Thread 18: novel\T-Z\TheDestroyer.JudgementDay.txt
+Start: Thread 58: novel\T-Z\TheDestroyer.KillorCure.txt
+Start: Thread 14: novel\T-Z\TheDestroyer.SlaveSafari.txt
+Start: Thread 47: novel\T-Z\THillerman.TheBlessingWay.txt
+Start: Thread 59: novel\T-Z\THunter.FearLoathingLasVegas.txt
+Start: Thread 34: novel\T-Z\Tom Clancy - Clear and Present Danger.txt
+Start: Thread 56: novel\T-Z\TP.EqualRites.txt
+Start: Thread 29: novel\T-Z\TP.Guards!Guards!.txt
+Start: Thread 4: novel\T-Z\TP.LightFantastic.txt
+Start: Thread 45: novel\T-Z\TP.Mort.txt
+Start: Thread 53: novel\T-Z\TP.Moving Pictures.txt
+Start: Thread 28: novel\T-Z\TP.Sorcery.txt
+Start: Thread 9: novel\T-Z\TP.TheColourofMagic.txt
+Start: Thread 60: novel\T-Z\TP.Wyrd Sisters.txt
+Start: Thread 33: novel\T-Z\Trevanian.TheEigerSanction.txt
+Start: Thread 49: novel\T-Z\TW.Tailchaser'sSong.txt
+Start: Thread 57: novel\T-Z\TW.TheBurningMan.txt
+Start: Thread 16: novel\T-Z\TW.TheDragonboneChair.txt
+Start: Thread 23: novel\T-Z\TW.TheStoneofFarewell.txt
+Start: Thread 12: novel\T-Z\TW.ToGreenAngelTower1.txt
+Start: Thread 3: novel\T-Z\TW.ToGreenAngelTower2.txt
+Start: Thread 13: novel\T-Z\TZ.Cobra Strike.txt
+Start: Thread 61: novel\T-Z\TZ.TheIcarusHunt.txt
+Start: Thread 14: novel\T-Z\ULeG.AwizardofEarthsea.txt
+Start: Thread 18: novel\T-Z\ULeG.TheFarthestShore.txt
+Start: Thread 58: novel\T-Z\ULeG.ThetombsofAtuan.txt
+Start: Thread 57: novel\T-Z\Uplift4.BrightnessReef.txt
+Start: Thread 54: novel\T-Z\Uplift5.Infinity'sShore.txt
+Start: Thread 50: novel\T-Z\Uplift6.Heaven'sReach.txt
+Start: Thread 11: novel\T-Z\WGolding.LordOfTheFlies.txt
+Start: Thread 15: novel\T-Z\WilburSmith_Warlock.txt
+Start: Thread 59: novel\T-Z\WK.DecisionatThunderRift.txt
+Start: Thread 47: novel\T-Z\WT.TheLongLoudSilence.txt
+Start: Thread 19: novel\T-Z\WT.TheYearOfTheQuietSun.txt
+Start: Thread 51: novel\T-Z\Zelazny, Roger - 09 - Knight of Shadows.txt
+Start: Thread 22: novel\T-Z\Zelazny, Roger - Amber 07 - Blood of Amber.txt
+Start: Thread 37: novel\T-Z\Zelazny, Roger - Amber 08 - Sign of Chaos.txt
+Start: Thread 31: novel\T-Z\Zelazny, Roger - Amber 10 - Prince of Chaos.txt
+
+-------------Word Count 473.300000--------------
 
 
+-------------Single Merge--------------
 
-Single Thread
+
+-------------Single Merge 103.162000--------------
+
+
+-------------Mul_Merge--------------
+
+Merge (8, 9)
+Merge (16, 17)
+Merge (32, 33)
+Merge (6, 7)
+Merge (28, 29)
+Merge (52, 53)
+Merge (10, 11)
+Merge (18, 19)
+Merge (26, 27)
+Merge (24, 25)
+Merge (44, 45)
+Merge (20, 21)
+Merge (30, 31)
+Merge (46, 47)
+Merge (54, 55)
+Merge (40, 41)
+Merge (14, 15)
+Merge (58, 59)
+Merge (38, 39)
+Merge (12, 13)
+Merge (34, 35)
+Merge (50, 51)
+Merge (56, 57)
+Merge (36, 37)
+Merge (2, 3)
+Merge (62, 63)
+Merge (22, 23)
+Merge (48, 49)
+Merge (60, 61)
+Merge (4, 5)
+Merge (42, 43)
+Merge (0, 1)
+Merge (28, 31)
+Merge (8, 11)
+Merge (16, 19)
+Merge (24, 27)
+Merge (36, 39)
+Merge (32, 35)
+Merge (40, 43)
+Merge (44, 47)
+Merge (48, 51)
+Merge (52, 55)
+Merge (12, 15)
+Merge (4, 7)
+Merge (56, 59)
+Merge (60, 63)
+Merge (20, 23)
+Merge (0, 3)
+Merge (32, 39)
+Merge (24, 31)
+Merge (48, 55)
+Merge (16, 23)
+Merge (40, 47)
+Merge (8, 15)
+Merge (56, 63)
+Merge (0, 7)
+Merge (16, 31)
+Merge (32, 47)
+Merge (48, 63)
+Merge (0, 15)
+Merge (0, 31)
+Merge (32, 63)
+Merge (0, 63)
+
+-------------Mul_Merge 64.747000--------------
+
+
 -------------find_topN_by_heap--------------
 
-the 331122
-and 165572
-to 153854
-of 137925
-a 111631
-I 95602
-was 88547
-in 83271
-that 67032
-he 62832
-had 61222
-his 60282
-it 58804
-you 53373
-her 51336
-as 43470
-with 42501
-for 39323
-on 38925
-at 34449
-me 33847
-she 32210
-said 32000
-him 30694
-my 28755
-not 28017
-from 26784
-be 26493
-He 25686
-were 25262
+the 3656454
+and 1734696
+to 1726789
+of 1521559
+a 1508094
+was 992762
+in 927057
+I 790809
+he 735016
+his 734285
+it 689112
+that 687078
+you 605213
+had 604642
+on 481058
+her 476385
+with 466638
+for 426386
+as 415429
+at 408073
+said 404423
+him 366237
+He 331335
+she 321590
+not 317661
+be 312259
+The 305107
+from 288214
+have 281306
+but 277256
+me 270031
+were 267582
+is 264813
+out 249022
+up 238680
+they 229602
+my 227162
+all 225638
+this 215812
+would 212728
+one 208956
+them 201005
+could 190407
+been 186548
+into 183882
+back 174671
+an 172513
+like 169592
+what 168635
+by 168078
+if 165054
+there 163130
+so 156077
+no 155179
+about 154283
+or 153301
+do 148437
+down 144528
+their 142898
+we 139339
+know 139129
+She 135297
+your 134371
+then 134150
+It 131796
+are 130197
+when 126394
+over 124662
+more 124244
+time 123452
+now 119601
+did 116278
+who 116270
+just 112498
+man 106696
+will 106601
+see 104851
+only 98988
+eyes 96980
+way 96565
+looked 95642
+through 94102
+don't 93868
+here 93593
+But 93177
+can 92704
+get 92211
+than 92091
+some 91480
+before 91100
+And 90789
+off 89307
+again 88703
+right 86733
+thought 86010
+didn't 84365
+two 83627
+other 82250
+too 81946
+which 81608
 
--------------find_topN_by_heap 0.298000--------------
+-------------find_topN_by_heap 1.753000--------------
+
+
+Program Completed!
+
+
+
+
+
+
+MAX_THREAD = 128
+N = 100
+
+-------------Word Count--------------
+
+Start: Thread 0: novel\.picasa.ini
+Start: Thread 1: novel\AB\AC.TheMysteriousAffairatStyles.txt
+Start: Thread 2: novel\AB\AH.TheFinalDiagnosis.txt
+Start: Thread 3: novel\AB\AlistairMacLean.BearIsland.txt
+Start: Thread 4: novel\AB\AlistairMaclean.IceStationZebra.txt
+Start: Thread 5: novel\AB\AlistairMaclean.NightWithoutEnd.txt
+Start: Thread 6: novel\AB\AlistairMaclean.Seawitch.txt
+Start: Thread 7: novel\AB\AlistairMaclean.TheGunsOfNavaronne.txt
+Start: Thread 8: novel\AB\AM.TheCrystalSinger.txt
+Start: Thread 9: novel\AB\AMC.Crystal.Line.txt
+Start: Thread 10: novel\AB\AMC.Damia.txt
+Start: Thread 11: novel\AB\AMC.DamiasChildren.txt
+Start: Thread 12: novel\AB\AMC.Killashandra.txt
+Start: Thread 13: novel\AB\AMC.LyonsPride.txt
+Start: Thread 14: novel\AB\AMC.MasterharperofPern.txt
+Start: Thread 15: novel\AB\AMC.TheRowan.txt
+Start: Thread 16: novel\AB\AMcCaffrey.TheSkiesOfPern.txt
+Start: Thread 17: novel\AB\AMilne.Vinni.txt
+Start: Thread 18: novel\AB\AnneR.BloodandGold(v2).txt
+Start: Thread 19: novel\AB\AnneR.BloodandGold.txt
+Start: Thread 20: novel\AB\AnneR.Lasher.txt
+Start: Thread 0: novel\AB\AnneR.MemnochTheDevil.txt
+Start: Thread 21: novel\AB\AnneR.ServantOfTheBones.txt
+Start: Thread 22: novel\AB\AnneR.TheMummy.txt
+Start: Thread 23: novel\AB\AnneR.TheTaleOfTheBodyThief.txt
+Start: Thread 24: novel\AB\AnneR.TheVampireArmand.txt
+Start: Thread 25: novel\AB\AnneR.TheWitchingHour.txt
+Start: Thread 26: novel\AB\AnneR.VittorioTheVampire.txt
+Start: Thread 27: novel\AB\AnnR.Interview.With.The.Vampire.txt
+Start: Thread 28: novel\AB\AnnR.Merrick.txt
+Start: Thread 29: novel\AB\AnnR.Pandora.txt
+Start: Thread 30: novel\AB\AnnR.QueenOfTheDamned.txt
+Start: Thread 31: novel\AB\AnnR.TheClaimingofSleepingBeauty.txt
+Start: Thread 32: novel\AB\AnnRice.The.Vampire.Lestat.txt
+Start: Thread 33: novel\AB\Atlantis.Found.txt
+Start: Thread 34: novel\AB\BCornwell.BattleFlag.txt
+Start: Thread 35: novel\AB\BCornwell.SharpesCompany.txt
+Start: Thread 36: novel\AB\BCornwell.SharpesFortress.txt
+Start: Thread 37: novel\AB\BCornwell.SharpesRegiment.txt
+Start: Thread 38: novel\AB\BCornwell.SharpesRifles.txt
+Start: Thread 39: novel\AB\BCornwell.SharpesTriumph.txt
+Start: Thread 40: novel\AB\BCornwell.SharpsTiger.txt
+Start: Thread 41: novel\AB\BernardCornwell.Sharpe'sGold.txt
+Start: Thread 42: novel\AB\BH.HouseAtreides.txt
+Start: Thread 43: novel\AB\BILL_The_Galactic_Hero_v1.1.txt
+Start: Thread 44: novel\AB\BL.Necroscope.txt
+Start: Thread 17: novel\AB\BL.Necroscope2.txt
+Start: Thread 45: novel\AB\BL.Necroscope3.txt
+Start: Thread 46: novel\AB\BLumley.Psychomech.txt
+Start: Thread 47: novel\C\CACB.TheFarKingdoms.txt
+Start: Thread 48: novel\C\CACB.TheWolfWorlds.txt
+Start: Thread 49: novel\C\CB.BooksOfBlood.txt
+Start: Thread 50: novel\C\CB.Booksofblood2.txt
+Start: Thread 51: novel\C\CB.Coldheart Canyon.txt
+Start: Thread 52: novel\C\CB.DamnationGame.txt
+Start: Thread 53: novel\C\CB.GreatSecretShow.txt
+Start: Thread 54: novel\C\CB.Imajica1.txt
+Start: Thread 55: novel\C\CB.Imajica2.txt
+Start: Thread 56: novel\C\CB.TheHellboundHeart.txt
+Start: Thread 57: novel\C\CB.TorturedSouls.txt
+Start: Thread 58: novel\C\CB_BookOfBlood06.txt
+Start: Thread 59: novel\C\CB_BooksOfBlood04.txt
+Start: Thread 60: novel\C\CB_BooksOfBlood05.txt
+Start: Thread 61: novel\C\CC.DeepSix.txt
+Start: Thread 62: novel\C\CC.FireIce.txt
+Start: Thread 63: novel\C\CC.FloodTide.txt
+Start: Thread 64: novel\C\CC.GoldenBuddha.txt
+Start: Thread 65: novel\C\CC.Iceberg.txt
+Start: Thread 66: novel\C\CC.NightProbe!.txt
+Start: Thread 67: novel\C\CC.PacificVortex.txt
+Start: Thread 68: novel\C\CC.TheMediterraneanCaper2.txt
+Start: Thread 69: novel\C\CC.Treasure.txt
+Start: Thread 70: novel\C\CC.TrojanOdyssey.txt
+Start: Thread 71: novel\C\CC.Valhalla Rising.txt
+Start: Thread 72: novel\C\CC.Vixen03.txt
+Start: Thread 73: novel\C\CC.WhiteDeath.txt
+Start: Thread 74: novel\C\CH.BasketCase.txt
+Start: Thread 75: novel\C\CH.DoubleWhammy.txt
+Start: Thread 76: novel\C\CH.LuckyYou.txt
+Start: Thread 77: novel\C\CH.NakedCameTheManatee.txt
+Start: Thread 78: novel\C\CH.NativeTongue.txt
+Start: Thread 79: novel\C\CH.SickPuppy.txt
+Start: Thread 80: novel\C\CH.TheCrazyKill.txt
+Start: Thread 81: novel\C\CH.TheRealCoolKillers.txt
+Start: Thread 82: novel\C\CHiaasen.StormyWeather.txt
+Start: Thread 83: novel\C\CHiaasen.TouristSeason.txt
+Start: Thread 84: novel\C\ChM.PerdidoStreetStation.txt
+Start: Thread 85: novel\C\chuckpalahniuk.fightclub.txt
+Start: Thread 86: novel\C\Clive Cussler.Serpent.txt
+Start: Thread 87: novel\C\CP.CreaturesOfForever.txt
+Start: Thread 88: novel\C\CP.EvilThirst.txt
+Start: Thread 89: novel\C\CP.Phantom.txt
+Start: Thread 90: novel\C\CP.RedDice.txt
+Start: Thread 91: novel\C\CP.TheLastVampire2.txt
+Start: Thread 92: novel\C\CPatricia.AllThatRemains.txt
+Start: Thread 93: novel\C\CPatricia.BlackNotice.txt
+Start: Thread 94: novel\C\CPatricia.PointofOrigin.txt
+Start: Thread 95: novel\C\CPatricia.UnnaturalExposure.txt
+Start: Thread 96: novel\C\CPike.TheLastVampire.txt
+Start: Thread 97: novel\C\CSF.MrMidshipmanHornblower.txt
+Start: Thread 98: novel\C\CSF.TheCommodore.txt
+Start: Thread 99: novel\C\CSL.TheHorseAndHisBoy.txt
+Start: Thread 1: novel\C\CSL.TheLionTheWitchAndTheWardrobe.txt
+Start: Thread 100: novel\C\CSL.TheMagiciansNephew.txt
+Start: Thread 101: novel\C\CSpector.WorldWithoutEnd.txt
+Start: Thread 102: novel\C\Cussler.BlueandGold.txt
+Start: Thread 104: novel\C\CW.BlackAlibi.txt
+Start: Thread 103: novel\C\CW.IMarriedADeadMan.txt
+Start: Thread 105: novel\C\CWilleford.Cockfighter.txt
+Start: Thread 106: novel\C\CWilleford.MiamiBlues.txt
+Start: Thread 107: novel\C\CWilleford.NewHopeForTheDead.txt
+Start: Thread 108: novel\C\CWilleford.PickUp.txt
+Start: Thread 109: novel\C\CWilleford.Sideswipe.txt
+Start: Thread 110: novel\C\CWilleford.TheBurntOrangeHeresy.txt
+Start: Thread 111: novel\C\CWilleford.TheSharkInfestedCustard.txt
+Start: Thread 112: novel\C\CWilleford.TheWayWeDieNow.txt
+Start: Thread 113: novel\C\Cyclops.txt
+Start: Thread 114: novel\DE\DA.LifetheUniverseandEverything.txt
+Start: Thread 115: novel\DE\DA.MostlyHarmless.txt
+Start: Thread 116: novel\DE\DA.SoLongandThanksforalltheFish.txt
+Start: Thread 6: novel\DE\DA.TheHitchHikersGuidetotheGalaxy.txt
+Start: Thread 57: novel\DE\DA.TheRestaurantattheEndoftheUniverse.txt
+Start: Thread 117: novel\DE\DanBrown.Angels&Demons.txt
+Start: Thread 118: novel\DE\DanBrown.DeceptionPoint.txt
+Start: Thread 121: novel\DE\DanBrown.DigitalFortress.txt
+Start: Thread 119: novel\DE\DanBrown.TheDaVinciCode.txt
+Start: Thread 120: novel\DE\DClegg.Purity.txt
+Start: Thread 122: novel\DE\Dean Koontz - The Mask.txt
+Start: Thread 43: novel\DE\Deathworld.2.txt
+Start: Thread 123: novel\DE\Deathworld.3.txt
+Start: Thread 124: novel\DE\Deathworld.txt
+Start: Thread 125: novel\DE\DEMILLE.TheGeneralsDaughter.txt
+Start: Thread 126: novel\DE\DF.Banker.txt
+Start: Thread 127: novel\DE\DF.FlyingFinish.txt
+Start: Thread 56: novel\DE\DF.Forfeit.txt
+Start: Thread 11: novel\DE\DF.Longshot.txt
+Start: Thread 9: novel\DE\DF.Smokescreen.txt
+Start: Thread 15: novel\DE\DF.TheEdge.txt
+Start: Thread 29: novel\DE\DF.TheRunelords.txt
+Start: Thread 26: novel\DE\DF.WhipHand.txt
+Start: Thread 4: novel\DE\DF_ComeToGrief.txt
+Start: Thread 7: novel\DE\DF_FieldOf13.txt
+Start: Thread 41: novel\DE\DH.TheAdventuresOfSamSpade.txt
+Start: Thread 3: novel\DE\DH.TheDainCurse.txt
+Start: Thread 5: novel\DE\DH.TheGlassKey.txt
+Start: Thread 77: novel\DE\DH.TheMalteseFalcon.txt
+Start: Thread 49: novel\DE\DH.TheThinMan.txt
+Start: Thread 31: novel\DE\DK.Coldfire.txt
+Start: Thread 13: novel\DE\DK.DemonSeed.txt
+Start: Thread 50: novel\DE\DK.InCornerOfEye.txt
+Start: Thread 85: novel\DE\DK.Intensity.txt
+Start: Thread 89: novel\DE\DK.Lightning.txt
+Start: Thread 2: novel\DE\DK.NightChills.txt
+Start: Thread 48: novel\DE\DK.OneDoorAwayFromHeaven.txt
+Start: Thread 37: novel\DE\DK.SantasTwin.txt
+Start: Thread 81: novel\DE\DK.SoleSurvivor.txt
+Start: Thread 59: novel\DE\DK.StrangeHighways.txt
+Start: Thread 1: novel\DE\DK.TheDoorToDecember.txt
+Start: Thread 120: novel\DE\DK.Ticktock.txt
+Start: Thread 8: novel\DE\DK.Watchers.txt
+Start: Thread 91: novel\DE\DKP_TheMinorityReportAndOtherStories.txt
+Start: Thread 37: novel\DE\DMorrell.FirstBlood.txt
+Start: Thread 35: novel\DE\DouglasHill.GalacticWarlord.txt
+Start: Thread 38: novel\DE\Dragon.txt
+Start: Thread 10: novel\DE\DW.JimmytheKid.txt
+Start: Thread 27: novel\DE\DW.WhatstheWorstThatCouldHappen.txt
+Start: Thread 58: novel\DE\DWestlake.BankShot.txt
+Start: Thread 21: novel\DE\EarlDerrBiggers.TheHouseWithoutAKey.txt
+Start: Thread 60: novel\DE\EColfer.ArtemisFowl.txt
+Start: Thread 116: novel\DE\EL.AngelEyes.txt
+Start: Thread 90: novel\DE\EL.FloatingCity.txt
+Start: Thread 87: novel\DE\EL.Kaisho.txt
+Start: Thread 12: novel\DE\EL.The Miko.txt
+Start: Thread 88: novel\DE\ElizabethPeters.HeShallThunderintheSky.txt
+Start: Thread 96: novel\DE\ElizabethPeters.TheGoldenOne.txt
+Start: Thread 100: novel\DE\ElizabethPeters.TheLastCamelDiedatNoon.txt
+Start: Thread 115: novel\DE\EM.HuntingParty.txt
+Start: Thread 80: novel\DE\EM.OathofGold.txt
+Start: Thread 16: novel\DE\EM.OnceAHero.txt
+Start: Thread 67: novel\DE\EMB.HeWhoHesitates.txt
+Start: Thread 28: novel\DE\EMB.SeeThemDie.txt
+Start: Thread 99: novel\DE\EPeters.AMorbidTasteForBones .txt
+Start: Thread 114: novel\DE\EPeters.OneCorpseTooMany.txt
+Start: Thread 6: novel\DE\EricLustbader.The Ninja.txt
+Start: Thread 36: novel\DE\ErleStanleyGardne.TheCaseOfTheDaringDivorcee.txt
+Start: Thread 0: novel\DE\ErleStanleyGardner.The.caseoftheSULKYGIRL.txt
+Start: Thread 14: novel\DE\ErleStanleyGardner.THECASEOFTHECARETAKERSCAT.txt
+Start: Thread 110: novel\DE\ErleStanleyGardner.THECASEOFTHECOUNTERFEITEYE.txt
+Start: Thread 65: novel\DE\ErleStanleyGardner.TheCaseOfTheHorrifiedHeirs.txt
+Start: Thread 103: novel\DE\ErleStanleyGardner.ThecaseoftheLuckyLegs.txt
+Start: Thread 101: novel\DE\ErleStanleyGardnerTHECASEOFTHECURIOUSBRIDE.txt
+Start: Thread 35: novel\DE\ErleStenlyGardner.THECASEOFTHEHOWLINGDOG.txt
+Start: Thread 57: novel\DE\ESG.TheCaseOfTheVelvetClaws.txt
+Start: Thread 39: novel\DE\ESG_TheCaseOfTheBlondeBonanza.txt
+Start: Thread 46: novel\DE\ESG_TheCaseOfTheDangerousDowager.txt
+Start: Thread 106: novel\DE\ESG_TheCaseOfTheSingingSkirt.txt
+Start: Thread 124: novel\DE\ESG_TheCaseOfTheSleepwalkersNiece.txt
+Start: Thread 22: novel\DE\ESG_TheCaseOfTheStutteringBishop.txt
+Start: Thread 40: novel\DE\ESG_TheCaseOfTheTroubledTrustee.txt
+Start: Thread 112: novel\F-I\FB.OzmaOfOz.txt
+Start: Thread 97: novel\F-I\FB.TheMarvelousLandOfOz.txt
+Start: Thread 41: novel\F-I\FForsyth.TheDayoftheJackal.txt
+Start: Thread 108: novel\F-I\FH.ChapterhouseDune.txt
+Start: Thread 64: novel\F-I\FH.ChildrenofDune.txt
+Start: Thread 5: novel\F-I\FH.Dune.txt
+Start: Thread 43: novel\F-I\FH.DuneMessiah.txt
+Start: Thread 18: novel\F-I\FH.GodEmperorofDune.txt
+Start: Thread 68: novel\F-I\FH.HereticsofDune.txt
+Start: Thread 121: novel\F-I\FrBaum.WonderfulWizardOZ.txt
+Start: Thread 19: novel\F-I\FS.TheFirstBookofSwords.txt
+Start: Thread 44: novel\F-I\FS.TheSecondBookofSwords.txt
+Start: Thread 9: novel\F-I\FS.TheThirdBookofSwords.txt
+Start: Thread 104: novel\F-I\FS.WoundhealersStory.txt
+Start: Thread 122: novel\F-I\GC.BlackCompany.txt
+Start: Thread 13: novel\F-I\GC.BleakSeasons7.txt
+Start: Thread 66: novel\F-I\GC.ShadowGames.txt
+Start: Thread 10: novel\F-I\GC.ShadowsLinger.txt
+Start: Thread 123: novel\F-I\GC.Swordbearer.txt
+Start: Thread 75: novel\F-I\GC.TheWhiteRose.txt
+Start: Thread 95: novel\F-I\GeorgeRRMartin.DyingoftheLight.txt
+Start: Thread 51: novel\F-I\GGK.ASongforArbonne.txt
+Start: Thread 49: novel\F-I\GGK.TheDarkestRoad.txt
+Start: Thread 109: novel\F-I\GGK.TheLionsofAl-Rassan.txt
+Start: Thread 111: novel\F-I\GGK.TheSummerTree.txt
+Start: Thread 23: novel\F-I\GGK.TheWanderingFire.txt
+Start: Thread 24: novel\F-I\GGK.Tigana.txt
+Start: Thread 34: novel\F-I\GM.DeathDream.txt
+Start: Thread 98: novel\F-I\GM.DeathTrance.txt
+Start: Thread 60: novel\F-I\GM.TheSphinx.txt
+Start: Thread 74: novel\F-I\GM.TheWellsOfHell.txt
+Start: Thread 56: novel\F-I\GNS.Accursed.txt
+Start: Thread 107: novel\F-I\GNS.BatsOutOfHell.txt
+Start: Thread 127: novel\F-I\GNS.BloodCircuit.txt
+Start: Thread 58: novel\F-I\GNS.CannibalCult.txt
+Start: Thread 82: novel\F-I\GNS.Snakes.txt
+Start: Thread 67: novel\F-I\GNS.TheBloodMerchants.txt
+Start: Thread 61: novel\F-I\GNS.TheDruidConnection.txt
+Start: Thread 92: novel\F-I\GNS.TheGraveyardVultures.txt
+Start: Thread 77: novel\F-I\GNS.TheLurkers.txt
+Start: Thread 83: novel\F-I\GNS.ThePlutoPact.txt
+Start: Thread 17: novel\F-I\GNS.TheSlimeBeast.txt
+Start: Thread 26: novel\F-I\GNS.TheWood.txt
+Start: Thread 76: novel\F-I\GNS.Throwback.txt
+Start: Thread 3: novel\F-I\Goldman.ThePrincessBride.txt
+Start: Thread 78: novel\F-I\GreenMile.txt
+Start: Thread 105: novel\F-I\GRRM.AClashofKings.txt
+Start: Thread 28: novel\F-I\GRRM.AGameofThrones.txt
+Start: Thread 36: novel\F-I\GRRM.AStormofSwords.txt
+Start: Thread 79: novel\F-I\GRRM.TheHedgeKnight.txt
+Start: Thread 73: novel\F-I\GS.EarthAbides.txt
+Start: Thread 62: novel\F-I\GW.TheClawoftheConciliator.txt
+Start: Thread 33: novel\F-I\GW.TheShadowoftheTorturer.txt
+Start: Thread 52: novel\F-I\HBPiper.FuzziesAndOtherPeople.txt
+Start: Thread 126: novel\F-I\HBPiper.FuzzySapiens.txt
+Start: Thread 65: novel\F-I\HBPiper.TheLittleFuzzy.txt
+Start: Thread 39: novel\F-I\HFilding.BridgetJonesDiary.txt
+Start: Thread 94: novel\F-I\HH.TheSSRat.Sings.The.Blues.txt
+Start: Thread 112: novel\F-I\HR.TheCarpetbaggers.txt
+Start: Thread 103: novel\F-I\HR.TheRaiders.txt
+Start: Thread 102: novel\F-I\iam fleming.for your eyes only.txt
+Start: Thread 97: novel\F-I\ian fleming.casino royale.txt
+Start: Thread 121: novel\F-I\IanCaldwell&DustinThomason.TheRuleofFour.txt
+Start: Thread 114: novel\F-I\IB.TheWaspFactory.txt
+Start: Thread 37: novel\F-I\IB.WalkingonGlass.txt
+Start: Thread 4: novel\F-I\IF.DaimondsAreForever.txt
+Start: Thread 110: novel\F-I\IF.Dr.No.txt
+Start: Thread 7: novel\F-I\IF.FromRussiawithLove.txt
+Start: Thread 35: novel\F-I\IF.Goldfinger.txt
+Start: Thread 0: novel\F-I\IF.Liveandletdie.txt
+Start: Thread 45: novel\F-I\IF.Moonraker.txt
+Start: Thread 72: novel\F-I\IF.Octopussy.txt
+Start: Thread 2: novel\F-I\IF.OnHerMajesty'sSecretService.txt
+Start: Thread 30: novel\F-I\IF.TheManwiththeGoldenGun.txt
+Start: Thread 15: novel\F-I\IF.TheSpyWhoLovedMe.txt
+Start: Thread 27: novel\F-I\IF.Thunderball.txt
+Start: Thread 99: novel\F-I\IF.YouOnlyLiveTwice.txt
+Start: Thread 106: novel\F-I\Inca.Gold.txt
+Start: Thread 124: novel\J-L\JAK.TheMothmanProphecies.txt
+Start: Thread 47: novel\J-L\JamesClavell.NobleHouse.txt
+Start: Thread 120: novel\J-L\JamesEllroy.Clandestine.txt
+Start: Thread 46: novel\J-L\JamesEllroy.CrimeWave.txt
+Start: Thread 22: novel\J-L\JamesEllroy.L.A.Confidential.txt
+Start: Thread 57: novel\J-L\JamesEllroy.WhiteJazz.txt
+Start: Thread 11: novel\J-L\JamesRollins.Amazonia.txt
+Start: Thread 14: novel\J-L\JamesRollins.DeepFathom.txt
+Start: Thread 21: novel\J-L\JClavell.Shogun.txt
+Start: Thread 17: novel\J-L\JDavid.FootprintsofThunder.txt
+Start: Thread 40: novel\J-L\JDickey.Deliverance.txt
+Start: Thread 70: novel\J-L\JE.TheBlackDahlia.txt
+Start: Thread 81: novel\J-L\JeffLong.YearZero.txt
+Start: Thread 55: novel\J-L\JeffRovin.Fatalis.txt
+Start: Thread 71: novel\J-L\JG.ATimetoKill.txt
+Start: Thread 58: novel\J-L\JG.PaintedHouse.txt
+Start: Thread 54: novel\J-L\JG.SkippingChristmas.txt
+Start: Thread 101: novel\J-L\JG.TheBrethren.txt
+Start: Thread 93: novel\J-L\JG.TheChamber.txt
+Start: Thread 32: novel\J-L\JG.TheClient.txt
+Start: Thread 86: novel\J-L\JG.TheFirm.txt
+Start: Thread 69: novel\J-L\JG.ThePartner.txt
+Start: Thread 77: novel\J-L\JG.ThePelicanBrief.txt
+Start: Thread 79: novel\J-L\JG.TheRainmaker.txt
+Start: Thread 107: novel\J-L\JG.TheSummons.txt
+Start: Thread 118: novel\J-L\JG.The_Street_Lawyer.txt
+Start: Thread 26: novel\J-L\JH.Catch22.txt
+Start: Thread 67: novel\J-L\JH.TheLastplaceGodMade.txt
+Start: Thread 82: novel\J-L\JHerbert.Sepulchre.txt
+Start: Thread 85: novel\J-L\JKRowling.HarryPotterandCS.txt
+Start: Thread 92: novel\J-L\JKRowling.HarryPotterandGF.txt
+Start: Thread 42: novel\J-L\JKRowling.HarryPotterandSS.txt
+Start: Thread 60: novel\J-L\JKRowling.HP&TheOrderOfPhenix.txt
+Start: Thread 127: novel\J-L\JKRowlingHarryPotterandPA.txt
+Start: Thread 61: novel\J-L\JohnGardner.Goldeneye.txt
+Start: Thread 43: novel\J-L\JohnGardner.NeverSendFlowers.txt
+Start: Thread 72: novel\J-L\JohnGardner.RollOfHonor.txt
+Start: Thread 125: novel\J-L\JohnGardner.Seafire.txt
+Start: Thread 31: novel\J-L\JohnGardner.WinLoseOrDie.txt
+Start: Thread 119: novel\J-L\JP.CradleAndAll.txt
+Start: Thread 126: novel\J-L\JPatterson.PopGoestheWeasel.txt
+Start: Thread 117: novel\J-L\JR.Shapechangers.txt
+Start: Thread 19: novel\J-L\JRT.FellowshipofRing.txt
+Start: Thread 44: novel\J-L\JRT.ReturnTheKing.txt
+Start: Thread 65: novel\J-L\JRT.The Hobbit.txt
+Start: Thread 63: novel\J-L\JRT.TwoTowers.txt
+Start: Thread 9: novel\J-L\JS&CS.BookOfTheDead.txt
+Start: Thread 89: novel\J-L\JS&CS.TheBridge.txt
+Start: Thread 15: novel\J-L\JS&CS.TheLightAtTheEnd.txt
+Start: Thread 104: novel\J-L\JS&CS.TheScream.txt
+Start: Thread 20: novel\J-L\Jurassic.Park.txt
+Start: Thread 1: novel\J-L\JVornholt.Voices.txt
+Start: Thread 10: novel\J-L\KJAnderson.LXG.txt
+Start: Thread 123: novel\J-L\KKenOneFlewOvertheCuckoosNest.txt
+Start: Thread 75: novel\J-L\KutzKatherin.TheKingsJustice.txt
+Start: Thread 97: novel\J-L\KutzKatherin.TheQuestforSaintCamber.txt
+Start: Thread 56: novel\J-L\KutzKattherine.The BishopsHeir.txt
+Start: Thread 3: novel\J-L\LeCarre.TheSpyWhoCame.txt
+Start: Thread 16: novel\J-L\LH.CaressofTwilight.txt
+Start: Thread 102: novel\J-L\LH.KissofShadows.txt
+Start: Thread 83: novel\J-L\LH.NarcissusinChains.txt
+Start: Thread 115: novel\J-L\LHamilton.Thebluemoon.txt
+Start: Thread 54: novel\J-L\LHamilton.Thekillingdance.txt
+Start: Thread 113: novel\J-L\LLA.LastoftheBreed.txt
+Start: Thread 39: novel\J-L\LLA.Sackett.txt
+Start: Thread 0: novel\J-L\LLA.TheBurningHills.txt
+Start: Thread 94: novel\J-L\LLA.TheLonelyMen.txt
+Start: Thread 66: novel\J-L\LMB.BARRAYAR.txt
+Start: Thread 122: novel\J-L\LMB.BORDERSOFINFINITY.txt
+Start: Thread 52: novel\J-L\LMB.BrothersInArms.txt
+Start: Thread 114: novel\J-L\LMB.Cetaganda.txt
+Start: Thread 38: novel\J-L\LMB.ETHANOFATHOS.txt
+Start: Thread 30: novel\J-L\LMB.FallingFree.txt
+Start: Thread 13: novel\J-L\LMB.Komarr.txt
+Start: Thread 4: novel\J-L\LMB.MirrorDance.txt
+Start: Thread 7: novel\J-L\LMB.SHARDSOFHONOR.txt
+Start: Thread 74: novel\J-L\LMB.THEVORGAME.txt
+Start: Thread 99: novel\J-L\LMB.TheWarriorsApprentice.txt
+Start: Thread 76: novel\J-L\LRH.DeathQuest.txt
+Start: Thread 34: novel\J-L\LRH.FortuneofFear.txt
+Start: Thread 53: novel\J-L\LRH.VillainyVictorious.txt
+Start: Thread 95: novel\J-L\LRH.VoyageofVengeance.txt
+Start: Thread 100: novel\J-L\LSdC.TheClocksOfIraz.txt
+Start: Thread 110: novel\J-L\LSdC.TheUndesiredPrincess.txt
+Start: Thread 23: novel\J-L\LSdeC.LestDarknessFall.txt
+Start: Thread 62: novel\M-P\MAC.ThePearlHarborMurders.txt
+Start: Thread 37: novel\M-P\MarcCerasini.AVP.txt
+Start: Thread 35: novel\M-P\MAS.OnceAHero.txt
+Start: Thread 45: novel\M-P\MB.AdvOfPeterPan.txt
+Start: Thread 88: novel\M-P\MC.Airframe.txt
+Start: Thread 111: novel\M-P\MC.EatersoftheDead.txt
+Start: Thread 27: novel\M-P\MC.Prey.txt
+Start: Thread 2: novel\M-P\MC.RisingSun.txt
+Start: Thread 91: novel\M-P\MC.TheAndromedaStrein.txt
+Start: Thread 0: novel\M-P\MC.TheGreatTrainRobbery.txt
+Start: Thread 40: novel\M-P\MC.TheTerminalMan.txt
+Start: Thread 72: novel\M-P\McK.Genesis.txt
+Start: Thread 8: novel\M-P\McK.HarpistintheWind.txt
+Start: Thread 61: novel\M-P\McK.HeirofSeaandFire.txt
+Start: Thread 90: novel\M-P\McK.TheRiddlemasterofHed.txt
+Start: Thread 46: novel\M-P\MCS.HavanaBay.txt
+Start: Thread 48: novel\M-P\MG.CityofCrime.txt
+Start: Thread 67: novel\M-P\MG.CrimeInsured.txt
+Start: Thread 59: novel\M-P\MG.Cyro.txt
+Start: Thread 124: novel\M-P\MG.DeathRidestheSkyway.txt
+Start: Thread 98: novel\M-P\MG.DictatorOfCrime.txt
+Start: Thread 29: novel\M-P\MG.GreenEyes.txt
+Start: Thread 41: novel\M-P\Michael Crichton.Congo.txt
+Start: Thread 33: novel\M-P\MILLER.ACanticleForLeibowitz.txt
+Start: Thread 108: novel\M-P\MK.Disclosure.txt
+Start: Thread 84: novel\M-P\MK.Timeline.txt
+Start: Thread 96: novel\M-P\MMitchell.Gonewiththewind.txt
+Start: Thread 107: novel\M-P\MOndaatje.TheEnglishPatient.txt
+Start: Thread 94: novel\M-P\MP.Godfather.txt
+Start: Thread 39: novel\M-P\MReilly.IceStation.txt
+Start: Thread 64: novel\M-P\MS.SurvivalZero.txt
+Start: Thread 18: novel\M-P\Myth.Conceptions.txt
+Start: Thread 119: novel\M-P\NC.SunglassesAfterDark.txt
+Start: Thread 57: novel\M-P\NDM.PlumIsland.txt
+Start: Thread 80: novel\M-P\NS.OnTheBeach.txt
+Start: Thread 43: novel\M-P\OSC.AM1.SeventhSon.txt
+Start: Thread 78: novel\M-P\OSC.AM2.RedProphet.txt
+Start: Thread 125: novel\M-P\OSC.AM3.PrenticeAlvin.txt
+Start: Thread 121: novel\M-P\OSC.AM4.AlvinJourneyman.txt
+Start: Thread 31: novel\M-P\OSC.AM5.Heartfire.txt
+Start: Thread 3: novel\M-P\P&C.Brimstone.txt
+Start: Thread 42: novel\M-P\P&C.IceLimit.txt
+Start: Thread 10: novel\M-P\P&C.MountDragon.txt
+Start: Thread 68: novel\M-P\P&C.Relic.txt
+Start: Thread 110: novel\M-P\P&C.StillLifeWithCrows.txt
+Start: Thread 103: novel\M-P\P&C.Thunderhead.txt
+Start: Thread 70: novel\M-P\PBien.jaws.txt
+Start: Thread 49: novel\M-P\PC.DamesDontCare.txt
+Start: Thread 120: novel\M-P\PDouglas.TheCodex.txt
+Start: Thread 85: novel\M-P\PGW.ADamselInDistress.txt
+Start: Thread 6: novel\M-P\PGW.PiccadillyJim.txt
+Start: Thread 45: novel\M-P\PGW.Psmith,Journalist.txt
+Start: Thread 1: novel\M-P\PGW.SpringFever.txt
+Start: Thread 38: novel\M-P\PGW.ThreeMenandaMaid.txt
+Start: Thread 50: novel\M-P\PGW.UneasyMoney.txt
+Start: Thread 87: novel\M-P\PP.AmberSpyglass.txt
+Start: Thread 67: novel\M-P\PP.TheGoldenCompass.txt
+Start: Thread 82: novel\M-P\PP.TheSubtleKnife.txt
+Start: Thread 117: novel\M-P\Preston&Child.Riptide.txt
+Start: Thread 73: novel\M-P\Preston&Child.TheCabinetofCuriosities.txt
+Start: Thread 55: novel\M-P\PZB.DrawingBlood.txt
+Start: Thread 62: novel\M-P\PZB.LostSouls.txt
+Start: Thread 59: novel\R\RA.Another Fine Myth.txt
+Start: Thread 111: novel\R\RA.Hit Or Myth.txt
+Start: Thread 118: novel\R\RA.Myth-ingPersons.txt
+Start: Thread 127: novel\R\RA.Myth-ionImprobable.txt
+Start: Thread 30: novel\R\RA.Myth-NomersAndIm-Pervections.txt
+Start: Thread 101: novel\R\RA.MythDirections.txt
+Start: Thread 126: novel\R\RA.MythIncinAction.txt
+Start: Thread 100: novel\R\RA.MythingPersons.txt
+Start: Thread 98: novel\R\RA.Phules Company.txt
+Start: Thread 69: novel\R\RA.SweetMyth-teryofLife.txt
+Start: Thread 116: novel\R\Raise.The.Titanic.txt
+Start: Thread 51: novel\R\RASalvatore.AttackOfTheClones.txt
+Start: Thread 29: novel\R\RaymondChandler.FarewellMyLovely.txt
+Start: Thread 77: novel\R\RaymondChandler.TheBigSleep.txt
+Start: Thread 23: novel\R\RaymondChandler.TheHighWindow.txt
+Start: Thread 37: novel\R\RC.Playback.txt
+Start: Thread 122: novel\R\RC.TheLadyInTheLake.txt
+Start: Thread 48: novel\R\RC.TheLittleSister.txt
+Start: Thread 72: novel\R\RC.TheLongGoodbye.txt
+Start: Thread 65: novel\R\RC.TheSimpleArtOfMurder.txt
+Start: Thread 22: novel\R\RC.TroubleIsMyBusiness.txt
+Start: Thread 14: novel\R\RH.Assassin'sQuest.txt
+Start: Thread 124: novel\R\RH.ConanTheWarrior.txt
+Start: Thread 91: novel\R\RH.RoyalAssassin.txt
+Start: Thread 74: novel\R\RH.TheAssassinsApprentice.txt
+Start: Thread 7: novel\R\RH.TheInvadersPlan.txt
+Start: Thread 58: novel\R\RichardHoyt.TheDragonPortfolio.txt
+Start: Thread 114: novel\R\RJ.ACrownofSwords.txt
+Start: Thread 40: novel\R\RJ.EyeoftheWorld.txt
+Start: Thread 90: novel\R\RJ.LordofChaos.txt
+Start: Thread 52: novel\R\RJ.RavensPrologue.txt
+Start: Thread 11: novel\R\RJ.TheDragonReborn.txt
+Start: Thread 18: novel\R\RJ.TheFiresofHeaven.txt
+Start: Thread 5: novel\R\RJ.TheGreatHunt.txt
+Start: Thread 16: novel\R\RJ.ThePathofDaggers.txt
+Start: Thread 81: novel\R\RJ.TheShadowRising.txt
+Start: Thread 99: novel\R\RL.TheBourneIdentity.txt
+Start: Thread 89: novel\R\RL.TheBourneUltimatum.txt
+Start: Thread 76: novel\R\RLS.CurseOfTheMummysTomb.txt
+Start: Thread 75: novel\R\RLS.MonsterBlood.txt
+Start: Thread 123: novel\R\RLS.SayCheeseAndDie.txt
+Start: Thread 111: novel\R\RLS.StayOutOfTheBasement.txt
+Start: Thread 54: novel\R\RLS.WelcomeToDeadHouse.txt
+Start: Thread 8: novel\R\RLudlum-Shelby.TheCassandraCompact.txt
+Start: Thread 0: novel\R\RM.Baal.txt
+Start: Thread 56: novel\R\RM.BoysLife.txt
+Start: Thread 61: novel\R\RM.HellHouse.txt
+Start: Thread 32: novel\R\RM.IMTheLegend.txt
+Start: Thread 52: novel\R\RM.Stinger.txt
+Start: Thread 66: novel\R\RM.SwanSong.txt
+Start: Thread 12: novel\R\RM.TheNightBoat.txt
+Start: Thread 118: novel\R\RMarkem.ColonelSun.txt
+Start: Thread 9: novel\R\RMD.DarkSideOfTheDollar.txt
+Start: Thread 15: novel\R\RMD.TheChill.txt
+Start: Thread 64: novel\R\RobertThurston.FalconGuard.txt
+Start: Thread 45: novel\R\RR.Armageddon3.txt
+Start: Thread 34: novel\R\RR.ArmageddonTheMusical.txt
+Start: Thread 111: novel\R\RR.EastOfEaling.txt
+Start: Thread 38: novel\R\RR.TheAntipope.txt
+Start: Thread 86: novel\R\RR.TheBrentfordChainstoreMassacre.txt
+Start: Thread 106: novel\R\RR.TheBrentfordTriangle.txt
+Start: Thread 63: novel\R\RR.TheSproutsofWrath.txt
+Start: Thread 59: novel\R\RR.TheyCameAndAteUs.txt
+Start: Thread 13: novel\R\RRM.Myst_TheBookofAtrus.txt
+Start: Thread 79: novel\R\RS.ChampagneForOne.txt
+Start: Thread 100: novel\R\RS.FamelyAffair.txt
+Start: Thread 20: novel\R\RS.HomicideTrinity.txt
+Start: Thread 119: novel\R\RS.InTheBestFamelies.txt
+Start: Thread 101: novel\R\RS.RubberBand.txt
+Start: Thread 30: novel\R\RS.SomeBuriedCaesar.txt
+Start: Thread 1: novel\R\RS.TheRedBox.txt
+Start: Thread 26: novel\R\RS.TooManyWomen.txt
+Start: Thread 53: novel\R\RS.UndertheAndes.txt
+Start: Thread 107: novel\R\RSERLING.SomethingsAliveontheTitanic.txt
+Start: Thread 80: novel\R\RSpider.CallahansCrosstimeSaloon.txt
+Start: Thread 2: novel\R\RStacy.DoomsdayWarrior.txt
+Start: Thread 127: novel\R\RStout.DeathofaDoxy.txt
+Start: Thread 123: novel\R\RZ.NinePrincesinAmber.txt
+Start: Thread 88: novel\R\RZ.SignoftheUnicorn.txt
+Start: Thread 115: novel\R\RZ.TheCourtsofChaos.txt
+Start: Thread 41: novel\R\RZ.TheGunsofAvalon.txt
+Start: Thread 113: novel\R\RZ.TheHandofOberon.txt
+Start: Thread 37: novel\R\RZ.TrumpsofDoom.txt
+Start: Thread 76: novel\S\Sahara.txt
+Start: Thread 75: novel\S\SC.AWizardinBedlam.txt
+Start: Thread 43: novel\S\SC.AWizardinMind.txt
+Start: Thread 95: novel\S\SCoonts.TheMinotaur.txt
+Start: Thread 50: novel\S\SheriTepper.Necromancer Nine.txt
+Start: Thread 54: novel\S\Shock.Wave.txt
+Start: Thread 69: novel\S\SidneySheldon.AStrangerInTheMirror.txt
+Start: Thread 104: novel\S\SimonRGreen.DeathstalkerLegacy.txt
+Start: Thread 33: novel\S\SK.BagofBones.txt
+Start: Thread 109: novel\S\SK.BlackHouse.txt
+Start: Thread 17: novel\S\SK.Carrie.txt
+Start: Thread 46: novel\S\SK.Cujo.txt
+Start: Thread 126: novel\S\SK.Cycle of the Werewolf.txt
+Start: Thread 32: novel\S\SK.Desperation.txt
+Start: Thread 71: novel\S\SK.dolores.txt
+Start: Thread 49: novel\S\SK.Dreamcatcher.txt
+Start: Thread 77: novel\S\SK.EverythingsEventual.txt
+Start: Thread 97: novel\S\SK.FromBuick.txt
+Start: Thread 70: novel\S\SK.GeraldsGame.txt
+Start: Thread 6: novel\S\SK.GirlWhoLovedTomGordon.txt
+Start: Thread 44: novel\S\SK.IT.txt
+Start: Thread 27: novel\S\SK.Langoliers.txt
+Start: Thread 19: novel\S\SK.Misery.txt
+Start: Thread 78: novel\S\SK.NightmaresAndDreamscapes.txt
+Start: Thread 31: novel\S\SK.NightShift.txt
+Start: Thread 102: novel\S\SK.OnWriting.txt
+Start: Thread 23: novel\S\SK.OnWriting2.txt
+Start: Thread 98: novel\S\SK.PetSematary.txt
+Start: Thread 122: novel\S\SK.Rage.txt
+Start: Thread 82: novel\S\SK.RoseMadder.txt
+Start: Thread 29: novel\S\SK.RunningMan.txt
+Start: Thread 108: novel\S\SK.SalemsLot.txt
+Start: Thread 126: novel\S\SK.SecretWindowSecretGarden.txt
+Start: Thread 100: novel\S\SK.SkeletonCrew.txt
+Start: Thread 48: novel\S\SK.TheDrawingofTheThree.txt
+Start: Thread 127: novel\S\SK.TheGunslinger.txt
+Start: Thread 24: novel\S\SK.TheLibraryPoliceman.txt
+Start: Thread 92: novel\S\SK.THELONGWALK.txt
+Start: Thread 85: novel\S\SK.ThePlant.txt
+Start: Thread 125: novel\S\SK.TheShining.txt
+Start: Thread 51: novel\S\SK.TheSunDog.txt
+Start: Thread 93: novel\S\SK.TheTalisman.txt
+Start: Thread 39: novel\S\SK.TheWasteLands.txt
+Start: Thread 37: novel\S\SK.Thinner.txt
+Start: Thread 79: novel\S\SK.Tommyknockers.txt
+Start: Thread 123: novel\S\SK.WizardAndTheGlass.txt
+Start: Thread 4: novel\S\SKHeartsInAtlantis.txt
+Start: Thread 120: novel\S\SmithWilbur_River God.txt
+Start: Thread 115: novel\S\SRDonaldson.Gilden-Fire.txt
+Start: Thread 111: novel\S\SRDonaldson.Lord.txt
+Start: Thread 80: novel\S\SRDonaldson.TheIllearthWar.txt
+Start: Thread 9: novel\S\SRDonaldson.ThePowerThatPreserves.txt
+Start: Thread 68: novel\S\SRG.Deathstalker.txt
+Start: Thread 61: novel\S\SS.IfTomorrowComes.txt
+Start: Thread 15: novel\S\SSheldon.DoomsdayConspiracy.txt
+Start: Thread 112: novel\S\SSheldon.TellMeYourDreams.txt
+Start: Thread 88: novel\S\Stephen King - Mist.txt
+Start: Thread 119: novel\S\StephenCoonts.Saucer.txt
+Start: Thread 113: novel\T-Z\TC.OPCenter.txt
+Start: Thread 103: novel\T-Z\TC.PatriotGames.txt
+Start: Thread 115: novel\T-Z\TC.RainbowSix.txt
+Start: Thread 84: novel\T-Z\TC.RedRabbit.txt
+Start: Thread 2: novel\T-Z\TC.RedStormRising.txt
+Start: Thread 124: novel\T-Z\TC.TheBearAndTheDragon.txt
+Start: Thread 62: novel\T-Z\TC.ThehuntforRedOctober.txt
+Start: Thread 26: novel\T-Z\TC.WithoutRemors.txt
+Start: Thread 106: novel\T-Z\TG.BLOODOFTHEFOLD.txt
+Start: Thread 50: novel\T-Z\TG.DebtofBones.txt
+Start: Thread 42: novel\T-Z\TG.FaithofFallen.txt
+Start: Thread 55: novel\T-Z\TG.SouloftheFire.txt
+Start: Thread 101: novel\T-Z\TG.Stone of Tears.txt
+Start: Thread 64: novel\T-Z\TG.TempleOfTheWinds.txt
+Start: Thread 121: novel\T-Z\TG.ThePillarsofCreation.txt
+Start: Thread 17: novel\T-Z\TG.WizardFirstRule.txt
+Start: Thread 67: novel\T-Z\TH.Hannibal.txt
+Start: Thread 34: novel\T-Z\TH.Red Dragon.txt
+Start: Thread 0: novel\T-Z\TH.TheSilenceoftheLambs.txt
+Start: Thread 83: novel\T-Z\THE BOURNE SUPREMACY.txt
+Start: Thread 23: novel\T-Z\The Stainless Steel Rat.txt
+Start: Thread 41: novel\T-Z\The.Lost.World.txt
+Start: Thread 35: novel\T-Z\The.Stainless.Steel.Rat.Joins.the.Circus.txt
+Start: Thread 13: novel\T-Z\The.Stainless.Steel.Rats.Revenge.txt
+Start: Thread 116: novel\T-Z\TheDestroyer.DeathCheck.txt
+Start: Thread 38: novel\T-Z\TheDestroyer.DestroyerCreated.txt
+Start: Thread 86: novel\T-Z\TheDestroyer.JudgementDay.txt
+Start: Thread 110: novel\T-Z\TheDestroyer.KillorCure.txt
+Start: Thread 45: novel\T-Z\TheDestroyer.SlaveSafari.txt
+Start: Thread 10: novel\T-Z\THillerman.TheBlessingWay.txt
+Start: Thread 58: novel\T-Z\THunter.FearLoathingLasVegas.txt
+Start: Thread 6: novel\T-Z\Tom Clancy - Clear and Present Danger.txt
+Start: Thread 20: novel\T-Z\TP.EqualRites.txt
+Start: Thread 30: novel\T-Z\TP.Guards!Guards!.txt
+Start: Thread 75: novel\T-Z\TP.LightFantastic.txt
+Start: Thread 43: novel\T-Z\TP.Mort.txt
+Start: Thread 102: novel\T-Z\TP.Moving Pictures.txt
+Start: Thread 63: novel\T-Z\TP.Sorcery.txt
+Start: Thread 1: novel\T-Z\TP.TheColourofMagic.txt
+Start: Thread 73: novel\T-Z\TP.Wyrd Sisters.txt
+Start: Thread 117: novel\T-Z\Trevanian.TheEigerSanction.txt
+Start: Thread 87: novel\T-Z\TW.Tailchaser'sSong.txt
+Start: Thread 59: novel\T-Z\TW.TheBurningMan.txt
+Start: Thread 127: novel\T-Z\TW.TheDragonboneChair.txt
+Start: Thread 53: novel\T-Z\TW.TheStoneofFarewell.txt
+Start: Thread 122: novel\T-Z\TW.ToGreenAngelTower1.txt
+Start: Thread 94: novel\T-Z\TW.ToGreenAngelTower2.txt
+Start: Thread 72: novel\T-Z\TZ.Cobra Strike.txt
+Start: Thread 118: novel\T-Z\TZ.TheIcarusHunt.txt
+Start: Thread 105: novel\T-Z\ULeG.AwizardofEarthsea.txt
+Start: Thread 50: novel\T-Z\ULeG.TheFarthestShore.txt
+Start: Thread 65: novel\T-Z\ULeG.ThetombsofAtuan.txt
+Start: Thread 8: novel\T-Z\Uplift4.BrightnessReef.txt
+Start: Thread 51: novel\T-Z\Uplift5.Infinity'sShore.txt
+Start: Thread 3: novel\T-Z\Uplift6.Heaven'sReach.txt
+Start: Thread 28: novel\T-Z\WGolding.LordOfTheFlies.txt
+Start: Thread 25: novel\T-Z\WilburSmith_Warlock.txt
+Start: Thread 27: novel\T-Z\WK.DecisionatThunderRift.txt
+Start: Thread 57: novel\T-Z\WT.TheLongLoudSilence.txt
+Start: Thread 126: novel\T-Z\WT.TheYearOfTheQuietSun.txt
+Start: Thread 69: novel\T-Z\Zelazny, Roger - 09 - Knight of Shadows.txt
+Start: Thread 19: novel\T-Z\Zelazny, Roger - Amber 07 - Blood of Amber.txt
+Start: Thread 59: novel\T-Z\Zelazny, Roger - Amber 08 - Sign of Chaos.txt
+Start: Thread 71: novel\T-Z\Zelazny, Roger - Amber 10 - Prince of Chaos.txt
+
+-------------Word Count 466.648000 second--------------
+
+
+-------------Single Merge--------------
+
+
+-------------Single Merge 133.920000 second--------------
+
+
+-------------Mul_Merge--------------
+
+Merge (64, 65)
+Merge (20, 21)
+Merge (68, 69)
+Merge (12, 13)
+Merge (28, 29)
+Merge (16, 17)
+Merge (8, 9)
+Merge (34, 35)
+Merge (24, 25)
+Merge (4, 5)
+Merge (72, 73)
+Merge (98, 99)
+Merge (0, 1)
+Merge (22, 23)
+Merge (120, 121)
+Merge (10, 11)
+Merge (54, 55)
+Merge (74, 75)
+Merge (48, 49)
+Merge (32, 33)
+Merge (44, 45)
+Merge (76, 77)
+Merge (6, 7)
+Merge (36, 37)
+Merge (102, 103)
+Merge (14, 15)
+Merge (46, 47)
+Merge (18, 19)
+Merge (84, 85)
+Merge (70, 71)
+Merge (108, 109)
+Merge (106, 107)
+Merge (112, 113)
+Merge (94, 95)
+Merge (58, 59)
+Merge (66, 67)
+Merge (38, 39)
+Merge (90, 91)
+Merge (80, 81)
+Merge (104, 105)
+Merge (86, 87)
+Merge (116, 117)
+Merge (96, 97)
+Merge (26, 27)
+Merge (82, 83)
+Merge (62, 63)
+Merge (40, 41)
+Merge (30, 31)
+Merge (2, 3)
+Merge (100, 101)
+Merge (114, 115)
+Merge (50, 51)
+Merge (88, 89)
+Merge (124, 125)
+Merge (92, 93)
+Merge (56, 57)
+Merge (52, 53)
+Merge (42, 43)
+Merge (60, 61)
+Merge (118, 119)
+Merge (110, 111)
+Merge (122, 123)
+Merge (126, 127)
+Merge (78, 79)
+Merge (16, 19)
+Merge (20, 23)
+Merge (8, 11)
+Merge (72, 75)
+Merge (68, 71)
+Merge (12, 15)
+Merge (32, 35)
+Merge (88, 91)
+Merge (64, 67)
+Merge (96, 99)
+Merge (44, 47)
+Merge (92, 95)
+Merge (84, 87)
+Merge (40, 43)
+Merge (104, 107)
+Merge (36, 39)
+Merge (24, 27)
+Merge (4, 7)
+Merge (52, 55)
+Merge (100, 103)
+Merge (116, 119)
+Merge (112, 115)
+Merge (124, 127)
+Merge (56, 59)
+Merge (28, 31)
+Merge (80, 83)
+Merge (108, 111)
+Merge (60, 63)
+Merge (48, 51)
+Merge (120, 123)
+Merge (0, 3)
+Merge (76, 79)
+Merge (64, 71)
+Merge (8, 15)
+Merge (88, 95)
+Merge (16, 23)
+Merge (96, 103)
+Merge (112, 119)
+Merge (32, 39)
+Merge (24, 31)
+Merge (56, 63)
+Merge (80, 87)
+Merge (104, 111)
+Merge (48, 55)
+Merge (40, 47)
+Merge (120, 127)
+Merge (72, 79)
+Merge (0, 7)
+Merge (80, 95)
+Merge (96, 111)
+Merge (16, 31)
+Merge (48, 63)
+Merge (32, 47)
+Merge (112, 127)
+Merge (64, 79)
+Merge (0, 15)
+Merge (0, 31)
+Merge (32, 63)
+Merge (64, 95)
+Merge (96, 127)
+Merge (64, 127)
+Merge (0, 63)
+Merge (0, 127)
+
+-------------Mul_Merge 81.200000 second--------------
+
+
+-------------find_topN_by_heap--------------
+
+the 3656454
+and 1734696
+to 1726789
+of 1521559
+a 1508094
+was 992762
+in 927057
+I 790809
+he 735016
+his 734285
+it 689112
+that 687078
+you 605213
+had 604642
+on 481058
+her 476385
+with 466638
+for 426386
+as 415429
+at 408073
+said 404423
+him 366237
+He 331335
+she 321590
+not 317661
+be 312259
+The 305107
+from 288214
+have 281306
+but 277256
+me 270031
+were 267582
+is 264813
+out 249022
+up 238680
+they 229602
+my 227162
+all 225638
+this 215812
+would 212728
+one 208956
+them 201005
+could 190407
+been 186548
+into 183882
+back 174671
+an 172513
+like 169592
+what 168635
+by 168078
+if 165054
+there 163130
+so 156077
+no 155179
+about 154283
+or 153301
+do 148437
+down 144528
+their 142898
+we 139339
+know 139129
+She 135297
+your 134371
+then 134150
+It 131796
+are 130197
+when 126394
+over 124662
+more 124244
+time 123452
+now 119601
+did 116278
+who 116270
+just 112498
+man 106696
+will 106601
+see 104851
+only 98988
+eyes 96980
+way 96565
+looked 95642
+through 94102
+don't 93868
+here 93593
+But 93177
+can 92704
+get 92211
+than 92091
+some 91480
+before 91100
+And 90789
+off 89307
+again 88703
+right 86733
+thought 86010
+didn't 84365
+two 83627
+other 82250
+too 81946
+which 81608
+
+-------------find_topN_by_heap 1.773000 second--------------
+
+
+Program Completed!
+
+
+
+
+
+
+
+
+

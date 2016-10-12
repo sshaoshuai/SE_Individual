@@ -12,7 +12,7 @@
 #include <time.h>
 
 using namespace std;
-const int MAX_THREAD = 64;
+const int MAX_THREAD = 30;
 
 typedef pair<string, int> PSI;
 map<string, int> M;
@@ -31,7 +31,7 @@ void setTime(const char * prompt)
 void getTime(const char * prompt)
 {
 	double time = (double)(clock() - tStart) / (double)CLOCKS_PER_SEC;
-	printf("\n-------------%s %f--------------\n\n", prompt, time);
+	printf("\n-------------%s %f second--------------\n\n", prompt, time);
 }
 
 inline bool isLegal(char c){
@@ -49,6 +49,7 @@ class ThreadPool{
 		//m_print_lock.unlock();
 
 		FILE *fp = fopen(filePath.c_str(), "r");
+
 		char srcWord[1000];
 		int len;
 		string curWord;
@@ -70,17 +71,26 @@ class ThreadPool{
 	}
 
 	void wordCount_for_thread(int id){
-		m_print_lock.lock();
-		//printf("Thread %d\n", id);
-		m_print_lock.unlock();
+		//m_print_lock.lock();
+		////printf("Thread %d\n", id);
+		//m_print_lock.unlock();
 		string nowFile;
+		int cnt_run_free = 0;
 		while (!thread_exit){
 			thread_busy[id] = false;
+			/*m_print_lock.lock();
+			printf("Run Empty: Thread %d\n", id);
+			m_print_lock.unlock();*/
+			cnt_run_free++;
+			if (cnt_run_free > 10) return;
+
+
 			m_lock.lock();
 			if (task_list.empty()){
 				m_lock.unlock();
 				continue;
 			}
+			cnt_run_free = 0;
 			thread_busy[id] = true;
 			nowFile = task_list.front();
 			task_list.pop();
@@ -90,9 +100,9 @@ class ThreadPool{
 			m_print_lock.unlock();
 			wordCount(nowFile, id);
 
-			//m_print_lock.lock();
-			//printf("Complete: Thread %d: %s\n", id, nowFile.c_str());
-			//m_print_lock.unlock();
+			m_print_lock.lock();
+			printf("Complete: Thread %d: %s\n", id, nowFile.c_str());
+			m_print_lock.unlock();
 		}
 		/*m_print_lock.lock();
 		printf("Thread %d exit\n", id);
@@ -153,7 +163,10 @@ public:
 
 	bool threadsFree(){
 		for (int i = 0; i < thread_list.size(); i++)
-			if (thread_busy[i] == true) return false;
+		if (thread_busy[i] == true) {
+			//printf("Run %d\n", i);
+			return false;
+		}
 		return true;
 	}
 
@@ -280,17 +293,18 @@ int main(void)
 	ThreadPool thread_pool(MAX_THREAD);
 	
 	while (true){
-		m_lock.lock();
-		if (task_list.size() == 0 && thread_pool.threadsFree()){
+		//m_lock.lock();
+		if (task_list.size() == 0){
+			while (!thread_pool.threadsFree());
 			thread_pool.exit();
-			m_lock.unlock();
+			//m_lock.unlock();
 			break;
 		}
-		m_lock.unlock();
+		//m_lock.unlock();
 	}
 	getTime("Word Count");
 
-	thread_pool.merge();
+	//thread_pool.merge();
 	thread_pool.mul_merge();
 	find_topN_by_heap(M_thread[0], topN);
 
