@@ -12,8 +12,8 @@
 #include <io.h>
 #include <time.h>
 using namespace std;
-const int MAX_THREAD = 4;
-const int MAX_BRANCH = 26;
+const int MAX_THREAD = 64;
+
 
 clock_t		tStart = 0;
 void setTime(const char * prompt)
@@ -56,124 +56,33 @@ struct MyHash{
 	}
 };
 
-
 typedef pair<WordNode, int> PSI;
-typedef pair<char*, int> PCI;
 typedef unordered_map<WordNode, int, MyHash> Map_PtrChar_Int;
 Map_PtrChar_Int M;
 Map_PtrChar_Int M_thread[MAX_THREAD];
 
 
-bool compareByValue(const PSI & A, const PSI & B){
-	return A.second > B.second;
-}
-struct cmp{
-	bool operator ()(const PSI & A, const PSI & B){
-		if (A.second == B.second) return strcmp(A.first.now, B.first.now) < 0;;
-		return A.second > B.second;
-	}
-};
-
-struct cmpPCI{
-	bool operator ()(const PCI & A, const PCI & B){
-		if (A.second == B.second) return strcmp(A.first, B.first) < 0;;
-		return A.second > B.second;
-	}
-};
-
-
 
 struct TrieNode{
-	char *word;
+	char word;
 	int cnt;
-	TrieNode *next_branch[MAX_BRANCH];
+	TrieNode *next_branch[26];
 
 public:
 	TrieNode(){
 		cnt = 0; word = NULL;
-		memset(next_branch, NULL, sizeof(TrieNode*)* MAX_BRANCH);
+		memset(next_branch, NULL, sizeof(TrieNode*) * 26);
 	}
 };
 
 class Trie{
-	TrieNode * root;
-	priority_queue<PCI, vector<PCI>, cmpPCI> Q;
-public:
-	Trie(){
-		root = new TrieNode();
-	}
-	void insert(const char * src, int delta){
-		if (src == NULL) return;
-		TrieNode *curNode = root;
-		int index = 0;
-		for (int i = 0; src[i]; i++){
-			index = src[i] - 'a';
-			if (index < 0 || index >= MAX_BRANCH) return;
-			if (curNode->next_branch[index] == NULL){
-				curNode->next_branch[index] = new TrieNode();
-			}
-			curNode = curNode->next_branch[index];
-		}
-		if (curNode->word == NULL){
-			curNode->word = new char[strlen(src) + 1];
-			strcpy(curNode->word, src);
-		}
-		curNode->cnt += delta;
-	}
-
-	void dfs_merge(const TrieNode * cur){
-		if (cur == NULL) return;
-		if (cur->word != NULL){
-			insert(cur->word, cur->cnt);
-		}
-		for (int i = 0; i < MAX_BRANCH; i++)
-			dfs_merge(cur->next_branch[i]);
-	}
-
-	void merge(const Trie * A){
-		dfs_merge(A->root);
-	}
-
-	void dfs_find_topN(const TrieNode * cur, int topN){
-		if (cur == NULL) return;
-		if (cur->word != NULL){
-			if (Q.size() < topN){
-				Q.push(make_pair(cur->word, cur->cnt));
-			}
-			else{
-				if (cur->cnt > Q.top().second){
-					Q.pop();
-					Q.push(make_pair(cur->word, cur->cnt));
-				}
-			}
-		}
-		for (int i = 0; i < MAX_BRANCH; i++)
-			dfs_find_topN(cur->next_branch[i], topN);
-	}
-
-	void find_topN(int topN){
-		setTime("find_topN_by_heap");
-
-		while (!Q.empty()) Q.pop();
-
-		dfs_find_topN(root, topN);
 
 
-		vector<PCI> output;
-		output.clear();
-		while (!Q.empty()){
-			output.push_back(Q.top());
-			Q.pop();
-		}
-		for (int i = output.size() - 1; i >= 0; i--)
-			printf("%s %d\n", output[i].first, output[i].second);
 
-		getTime("find_topN_by_heap");
-
-	}
+};
 
 
-} *word_count[MAX_THREAD];
+
 
 
 class ThreadPool{
@@ -239,22 +148,16 @@ class ThreadPool{
 				word_st = i + 1;
 				continue;
 			}
-			if (word_len > 1000){
-				printf("Error\n");
-				return;
-			}
 			word_len = min(word_len, 999);
 			temp[word_len] = '\0';
-			word_count[id]->insert(temp, 1);
+			WordNode word;
+			strcpy(word.now, temp);
+			word.now[word_len] = '\0';
 
-			//WordNode word;
-			//strcpy(word.now, temp);
-			//word.now[word_len] = '\0';
-
-			//if (M_thread[id].find(word) == M_thread[id].end())
-			//	M_thread[id][word] = 1;
-			//else
-			//	M_thread[id][word]++;
+			if (M_thread[id].find(word) == M_thread[id].end())
+				M_thread[id][word] = 1;
+			else
+				M_thread[id][word]++;
 			word_st = i + 1; word_len = 0;
 		}
 
@@ -291,9 +194,9 @@ class ThreadPool{
 			nowFile = task_list.front();
 			task_list.pop();
 			m_lock.unlock();
-	/*		m_print_lock.lock();
+			m_print_lock.lock();
 			printf("Start: Thread %d: %s\n", id, nowFile.c_str());
-			m_print_lock.unlock();*/
+			m_print_lock.unlock();
 			wordCount2(nowFile, id);
 
 			//m_print_lock.lock();
@@ -328,42 +231,17 @@ class ThreadPool{
 		m_print_lock.unlock();
 	}
 
-	void dfs_merge_trie(int l, int r){
-		if (l == r) return;
-		int mid = (l + r) >> 1;
-
-		if (r - l > 1){
-			thread l_thread(&ThreadPool::dfs_merge_trie, this, l, mid);
-			thread r_thread(&ThreadPool::dfs_merge_trie, this, mid + 1, r);
-			l_thread.join(); r_thread.join();
-		}
-		mid++;
-		
-		
-		Trie *left = word_count[l];
-		Trie *right = word_count[mid];
-
-		left->merge(right);
-
-		m_print_lock.lock();
-		//printf("Merge (%d, %d)\n", l, r);
-		m_print_lock.unlock();
-	}
-
-
-
 public:
 	ThreadPool(int threadNum){
 		thread_exit = false;
 		for (int i = 0; i < threadNum; i++) M_thread[i].clear();
-		for (int i = 0; i < threadNum; i++) word_count[i] = new Trie();
 		for (int i = 0; i < threadNum; i++)
 			thread_list.push_back(new thread(&ThreadPool::wordCount_for_thread, this, i));
 	}
 
 	void mul_merge(){
 		setTime("Mul_Merge");
-		dfs_merge_trie(0, thread_list.size() - 1);
+		dfs_merge(0, thread_list.size() - 1);
 		getTime("Mul_Merge");
 	}
 
@@ -422,6 +300,16 @@ public:
 //	}
 //	fclose(fp);
 //}
+
+bool compareByValue(const PSI & A, const PSI & B){
+	return A.second > B.second;
+}
+struct cmp{
+	bool operator ()(const PSI & A, const PSI & B){
+		if (A.second == B.second) return strcmp(A.first.now, B.first.now) < 0;;
+		return A.second > B.second;
+	}
+};
 
 
 void find_topN_by_sort(Map_PtrChar_Int & M, int topN){
@@ -517,12 +405,7 @@ int main(void)
 
 	//thread_pool.merge();
 	thread_pool.mul_merge();
-	//find_topN_by_heap(M_thread[0], topN);
-
-
-	word_count[0]->find_topN(topN);
-
-
+	find_topN_by_heap(M_thread[0], topN);
 
 	cout << endl << "Program Completed!" << endl;
 	
